@@ -5,11 +5,11 @@ from __future__ import annotations
 
 import re
 import sys
+import argparse
 from pathlib import Path
 
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 
 REQUIRED_FILES = (
     "SKILL.md",
@@ -57,9 +57,9 @@ def validate_required_files() -> None:
             fail(f"missing required package file: {relative_path}")
 
 
-def validate_markdown_links() -> None:
+def validate_markdown_links(search_root: Path) -> None:
     broken: list[str] = []
-    for markdown_file in REPOSITORY_ROOT.rglob("*.md"):
+    for markdown_file in search_root.rglob("*.md"):
         if ".git" in markdown_file.parts:
             continue
         content = markdown_file.read_text(encoding="utf-8")
@@ -68,18 +68,28 @@ def validate_markdown_links() -> None:
             if target.startswith(("http://", "https://", "mailto:", "#")):
                 continue
             if not (markdown_file.parent / target).exists():
-                broken.append(f"{markdown_file.relative_to(REPOSITORY_ROOT)} -> {target}")
+                broken.append(f"{markdown_file.relative_to(search_root)} -> {target}")
     if broken:
         fail("broken local Markdown links:\n  " + "\n  ".join(broken))
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Validate the installable competition-PPT Skill package."
+    )
+    parser.add_argument(
+        "--repository-root",
+        type=Path,
+        help="Optional repository root for validating the GitHub-facing README files too.",
+    )
+    args = parser.parse_args()
+    search_root = args.repository_root.resolve() if args.repository_root else PACKAGE_ROOT
+
     validate_front_matter()
     validate_required_files()
-    validate_markdown_links()
+    validate_markdown_links(search_root)
     print("PACKAGE_STATIC_VALIDATION=OK")
 
 
 if __name__ == "__main__":
     main()
-

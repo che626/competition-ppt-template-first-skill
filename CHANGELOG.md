@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 - 2026-07-12
+
+- Fixed installed-package validation so unrelated global Skills are not scanned.
+
 ## 0.4.1 - 2026-07-12
 
 - Added release-maintenance validation for package structure, front matter, and local Markdown links.

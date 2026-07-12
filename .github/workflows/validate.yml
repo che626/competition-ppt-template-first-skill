@@ -14,6 +14,6 @@ jobs:
         with:
           python-version: "3.10"
       - name: Validate package structure and links
-        run: python skills/competition-ppt-template-first/scripts/validate-package.py
+        run: python skills/competition-ppt-template-first/scripts/validate-package.py --repository-root .
       - name: Compile workspace initializer
         run: python -m py_compile skills/competition-ppt-template-first/scripts/init-report-grounded-deck.py
