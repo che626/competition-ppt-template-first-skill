@@ -6,9 +6,14 @@ A competition deck is iterative. Without a predictable folder structure, an agen
 
 ```text
 competition-ppt/
+  00_intake/
+    source-manifest.md
+    extraction-notes.md
+    supplied-assets/
   00_plan/
     deck-brief.md
     fact-registry.md
+    slide-source-map.md
     slide-map.md
     revision-record.md
   01_templates/
@@ -34,6 +39,7 @@ competition-ppt/
 | State | Meaning | Agent action |
 | --- | --- | --- |
 | `planned` | Content and evidence are mapped, no visual decision yet. | Build the template brief. |
+| `ingested` | Documents, assets, source locators, and do-not-claim items are recorded. | Build the narrative and slide-source map. |
 | `template-review` | The whole-slide template has been generated. | Show it; do not build the final page until it is viable. |
 | `build-review` | The layered PPT and render exist. | Inspect readability, source fidelity, and visual fit. |
 | `approved` | The user explicitly accepts the page. | Copy to `04_approved`; preserve it. |
@@ -50,11 +56,10 @@ competition-ppt/
 
 For a full deck, communicate one active stage at a time:
 
-1. Fact registry and story map
+1. Source intake, fact registry, and slide-source map
 2. Visual system and signature-slide approval
 3. Template production
 4. Editable PPT build
 5. Rendered QA and approved archive
 
 Use file paths as completion evidence. Do not mark a stage complete solely because a chat response was written.
-

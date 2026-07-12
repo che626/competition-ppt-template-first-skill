@@ -21,6 +21,28 @@
 4. 模板确认后，将其拆成背景、真实证据图片、可编辑文字和少量可替换覆盖层。
 5. 导出 PPT 实图检查，逐页根据反馈修改并归档满意版本。
 
+## 新能力：作品文档投喂到答辩路线
+
+现在不需要先把文档手工总结一遍再让 AI 做 PPT。将作品报告、比赛要求、数据表、系统截图和奖项材料一并提供给 Skill，它会先完成：
+
+```text
+作品文档与素材
+  -> 来源清单
+  -> 带页码/章节出处的事实库
+  -> 每页事实与证据对应表
+  -> 面向评委的答辩叙事路线
+  -> 代表页模板图
+  -> 可编辑答辩 PPT
+```
+
+每一个关键结论都要绑定事实编号与文档定位，例如“报告 S-01，第 4.2 节”或“数据表 S-03，Metrics 工作表 B8:F12”。没有出处的内容不允许进入最终页；未来计划会被明确标为未来计划。
+
+完整流程见 [references/source-ingestion.md](references/source-ingestion.md)，可以用下面命令初始化工作目录：
+
+```text
+python scripts/init-report-grounded-deck.py .\my-competition-deck --source-folder .\project-materials
+```
+
 ## 关键方法
 
 - 生图负责：构图、氛围、场景、材质、光影、整体高级感。
@@ -63,7 +85,8 @@ $competition-ppt-template-first
 
 ```text
 competition-ppt/
-  00_plan/       事实登记表、叙事主线、逐页蓝图
+  00_intake/     来源清单、提取笔记、原始素材引用
+  00_plan/       事实登记表、叙事主线、页级事实映射、逐页蓝图
   01_templates/  已确认的整页模板图与提示词记录
   02_build/      可编辑 PPTX 制作文件
   03_renders/    PPT 导出预览与检查记录
@@ -84,10 +107,13 @@ competition-ppt/
 - [`SKILL.md`](SKILL.md)：给 AI 执行的完整流程
 - [`references/workflow.md`](references/workflow.md)：从材料到成品的详细方法
 - [`references/layout-archetypes.md`](references/layout-archetypes.md)：痛点、方案、模型、迭代、系统、奖项、规划等页面结构
+- [`references/source-ingestion.md`](references/source-ingestion.md)：读取作品文档、提取事实、建立答辩路线的方法
 - [`references/quality-gates.md`](references/quality-gates.md)：导出后的质检清单
 - [`templates/slide-blueprint.md`](templates/slide-blueprint.md)：逐页设计蓝图
 - [`templates/fact-registry.md`](templates/fact-registry.md)：事实与证据登记表
 - [`templates/deck-brief.md`](templates/deck-brief.md)：整套 PPT 的设计总控表
+- [`templates/source-manifest.md`](templates/source-manifest.md)：文档、要求、数据和素材的来源清单
+- [`templates/slide-source-map.md`](templates/slide-source-map.md)：每页结论与文档事实、真实证据的对应表
 - [`templates/revision-record.md`](templates/revision-record.md)：将用户反馈转成结构性修改的记录
 
 ## 安装

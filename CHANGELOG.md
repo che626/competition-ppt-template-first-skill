@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 - 2026-07-12
+
+- Added report-grounded defense-deck mode for turning project documents and evidence into a traceable PPT route.
+- Added mandatory source ingestion, source locators, fact IDs, evidence IDs, and slide-source mapping.
+- Added source-manifest and slide-source-map templates plus a workspace initialization script.
+- Added document-to-defense prompt recipes and source-ingestion documentation.
+
 ## 0.2.1 - 2026-07-12
 
 - Fixed strict YAML parsing for `SKILL.md` discovery by the `skills` CLI.

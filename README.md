@@ -27,6 +27,22 @@ flowchart LR
 
 The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update.
 
+## New: Report-Grounded Deck Mode
+
+Feed the project package, not just a topic. The skill converts source documents into a traceable defense route before it designs a page:
+
+```text
+report / proposal / requirements / data / screenshots
+  -> source manifest
+  -> fact registry with section and page locators
+  -> slide-source map
+  -> judge-facing narrative
+  -> signature slide
+  -> editable defense PPT
+```
+
+Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Read [`references/source-ingestion.md`](references/source-ingestion.md) for the full contract.
+
 ## Why Template-First
 
 | Conventional AI PPT | Template-first competition PPT |
@@ -71,11 +87,18 @@ slide map, and one representative template-first signature slide for approval.
 
 More copy-ready prompts are in [`examples/prompt-recipes.md`](examples/prompt-recipes.md).
 
+To initialize the standard report-grounded workspace:
+
+```text
+python scripts/init-report-grounded-deck.py ./my-competition-deck --source-folder ./project-materials
+```
+
 ## What the Skill Produces
 
 ```text
 competition-ppt/
-  00_plan/       fact registry, deck brief, slide map
+  00_intake/     source manifest, extraction notes, original-asset references
+  00_plan/       fact registry, deck brief, slide-source map, page blueprints
   01_templates/  approved 16:9 template images and prompt records
   02_build/      editable PPTX work files
   03_renders/    exported previews and QA notes
@@ -91,10 +114,13 @@ The full folder convention is documented in [`references/project-conventions.md`
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | Agent execution contract and mode selection |
 | [`references/workflow.md`](references/workflow.md) | Fact-to-deck production method |
+| [`references/source-ingestion.md`](references/source-ingestion.md) | Document intake, traceable fact extraction, and defense-route construction |
 | [`references/layout-archetypes.md`](references/layout-archetypes.md) | Competition-specific page structures |
 | [`references/prompt-library.md`](references/prompt-library.md) | Prompt patterns for visual templates |
 | [`references/quality-gates.md`](references/quality-gates.md) | Rendered PPT acceptance checks |
 | [`templates/deck-brief.md`](templates/deck-brief.md) | Deck-level planning template |
+| [`templates/source-manifest.md`](templates/source-manifest.md) | Inventory of reports, requirements, data, and assets |
+| [`templates/slide-source-map.md`](templates/slide-source-map.md) | Page-by-page mapping from source facts to judge conclusions |
 | [`templates/slide-blueprint.md`](templates/slide-blueprint.md) | Per-page content and layout blueprint |
 | [`templates/revision-record.md`](templates/revision-record.md) | Feedback-to-structural-revision log |
 | [`examples/ai-vision-defense-example.md`](examples/ai-vision-defense-example.md) | A generic 11-page AI vision map |

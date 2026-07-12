@@ -12,6 +12,19 @@ Then generate one dense representative signature-slide template for approval.
 Do not start bulk slide production until the signature slide is approved.
 ```
 
+## 1A. Feed a complete project package into the skill
+
+```text
+$competition-ppt-template-first
+Use report-grounded defense-deck mode. Read every document in [project materials folder],
+the competition brief at [path], and the real screenshots in [assets folder].
+First initialize a report-grounded workspace. Then give each document a source ID,
+extract verified facts and evidence IDs with exact section/page/table locators, and create a slide-source map.
+For every proposed slide, show: the judge question, the page conclusion, its fact IDs,
+its real evidence, and the transition to the next page.
+Only after I confirm this route should you generate the signature-slide template.
+```
+
 ## 2. Repair a weak existing page
 
 ```text
@@ -41,4 +54,3 @@ Create an awards-and-results page using the real papers, certificates, and recor
 Group the artifacts by what they prove, not only by file type. Use a readable evidence-wall composition
 with a concise argument column. Do not generate replacement certificates or put the real documents in tiny slots.
 ```
-
