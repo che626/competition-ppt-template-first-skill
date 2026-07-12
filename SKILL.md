@@ -7,7 +7,7 @@ description: Create polished, competition-grade defense PPTs through a template-
 
 Use this skill when a user wants an attractive, high-stakes competition or defense deck. The goal is not merely to fill a PPT with text. The goal is a coherent visual narrative in which every page looks intentionally art-directed while the important text and evidence remain editable.
 
-Read `references/workflow.md`, `references/layout-archetypes.md`, and `references/quality-gates.md` before creating slides.
+Read `references/workflow.md`, `references/layout-archetypes.md`, `references/project-conventions.md`, `references/prompt-library.md`, and `references/quality-gates.md` before creating slides.
 
 ## The Core Principle
 
@@ -22,6 +22,19 @@ Instead:
 5. Render and inspect every page before calling it finished.
 
 The image template supplies composition, atmosphere, light, material, visual rhythm, and high-end detailing. The PPT layer supplies factual text, real screenshots, charts, and evidence.
+
+## Select the Right Mode
+
+Pick the smallest mode that still preserves the template-first principle:
+
+| Mode | Use when | Required output |
+| --- | --- | --- |
+| `Full defense deck` | A report or project needs a complete competition presentation. | Fact registry, slide map, approved sample, layered PPT, rendered QA. |
+| `Single signature slide` | The user wants to test a visual direction or repair a key page. | Slide blueprint, template image, editable PPT page, preview. |
+| `Existing deck repair` | A PPT exists but its visual structure, content density, or evidence use is weak. | Diagnosis, rebuilt background template where necessary, revised editable page. |
+| `Image/PDF to editable` | The user already has an image-based page and needs native text/images. | Object-level reconstruction plan; do not claim full editability when only a background image is retained. |
+
+State the selected mode and the expected user approval point before producing non-trivial slide output.
 
 ## Non-Negotiable Rules
 
@@ -62,6 +75,8 @@ Write the deck's judge takeaway in one sentence. Then create an ordered slide ma
 
 Use `templates/slide-blueprint.md`.
 
+For a full deck, begin from `templates/deck-brief.md`, then create one slide blueprint per page. Keep the resulting files in the project structure described by `references/project-conventions.md`.
+
 ### 3. Choose a visual system
 
 Choose a dominant background tone, one support tone, one sharp accent, type hierarchy, texture/material motif, and title behavior. Then map template intensity to the slide:
@@ -85,11 +100,15 @@ Generate one 16:9 template image per slide before building the PPT. The prompt m
 
 The template image may include integrated light, surfaces, device imagery, fabric, camera optics, data atmosphere, or evidence-wall treatment. It should not look like a wireframe that was assembled from empty boxes.
 
+Use the appropriate page prompt in `references/prompt-library.md`; adapt the subject matter and evidence zones rather than copying a previous page's composition.
+
 ### 5. Review composition before production
 
 Show the template preview. Check whether it has enough room for the planned text and real evidence, whether it feels visually finished, and whether it belongs to the same deck.
 
 Do not convert an unapproved or visibly cramped template into a PPT. Regenerate it first.
+
+For a full deck, generate exactly one representative **signature slide** first. It should be a real content page with the deck's expected density, not an empty cover. After the user approves its visual language, record the approved palette, title hierarchy, image treatment, and template-generation method in the project brief before creating the remaining pages.
 
 ### 6. Rebuild as a layered editable PPT
 
@@ -106,6 +125,8 @@ Do not chase full editability at the expense of visual quality. The factual cont
 ### 7. Render, inspect, revise, archive
 
 Render the actual PPT to images. Check it against `references/quality-gates.md`, then revise. Archive only versions the user has confirmed.
+
+For each revision, record: feedback, root cause, structural change, and output path using `templates/revision-record.md`. Do not replace a confirmed page without preserving an approved copy.
 
 ## Feedback Translation Rules
 
@@ -130,4 +151,3 @@ A page is complete only when:
 - All important text is readable, aligned, and inside its intended region.
 - The page looks coherent in the rendered PPT, not merely in the editor.
 - No placeholder notes, design comments, generated gibberish, or accidental English labels remain.
-

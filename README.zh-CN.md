@@ -1,6 +1,10 @@
 # 竞赛答辩 PPT：整页模板优先 Skill
 
-这是一个用于制作高完成度竞赛答辩 PPT 的 Codex Skill。它不是教你给 PPT 叠几个卡片，而是把一套经过反复修改验证的工作流固定下来：先分析材料和叙事，再生成整页视觉模板，最后拆成可编辑 PPT。
+[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-111827)](SKILL.md)
+[![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](references/workflow.md)
+[![License](https://img.shields.io/badge/License-MIT-f59e0b)](LICENSE)
+
+> 先把页面当作完整的视觉作品设计出来，再把关键内容做成可编辑 PPT。
 
 [English README](README.md)
 
@@ -24,6 +28,42 @@
 - 同一份 PPT 要统一标题位置、字级、色彩逻辑和材质气质，但不能每页都套同一种布局。
 - 底层模板不对时，必须重新生成底层模板，不能靠在旧页面上不断叠新框修补。
 
+## 快速安装与使用
+
+将仓库放进支持 `SKILL.md` 的 Agent Skills 目录，或使用兼容的安装器：
+
+```bash
+npx -y skills@latest add che626/competition-ppt-template-first-skill \
+  --skill competition-ppt-template-first \
+  --agent codex \
+  --global
+```
+
+然后在对话中附上作品报告、真实截图和参考页，直接这样使用：
+
+```text
+$competition-ppt-template-first
+读取作品报告和素材图，为 AI 视觉应用竞赛做一份 11 页答辩 PPT。
+先输出事实登记表、PPT 目录、每页放什么和需要哪些真实图片；
+再生成一张高完成度的代表页模板图，确认风格后再批量制作。
+```
+
+更多可直接复制的提示词见 [examples/prompt-recipes.md](examples/prompt-recipes.md)。
+
+## 项目工作目录
+
+```text
+competition-ppt/
+  00_plan/       事实登记表、叙事主线、逐页蓝图
+  01_templates/  已确认的整页模板图与提示词记录
+  02_build/      可编辑 PPTX 制作文件
+  03_renders/    PPT 导出预览与检查记录
+  04_approved/   用户明确满意的页面
+  99_retired/    被淘汰的方案，保留用于追溯
+```
+
+详细规范见 [references/project-conventions.md](references/project-conventions.md)。
+
 ## 适用场景
 
 - 创新创业、人工智能、机器人、工程、科研类竞赛答辩
@@ -38,6 +78,8 @@
 - [`references/quality-gates.md`](references/quality-gates.md)：导出后的质检清单
 - [`templates/slide-blueprint.md`](templates/slide-blueprint.md)：逐页设计蓝图
 - [`templates/fact-registry.md`](templates/fact-registry.md)：事实与证据登记表
+- [`templates/deck-brief.md`](templates/deck-brief.md)：整套 PPT 的设计总控表
+- [`templates/revision-record.md`](templates/revision-record.md)：将用户反馈转成结构性修改的记录
 
 ## 安装
 
@@ -45,3 +87,11 @@
 
 仓库不包含真实项目截图、获奖证书或其他私密素材，只包含通用方法和匿名示例。
 
+## 适用与边界
+
+- 最适合创新创业、AI、机器人、工程、科研、产品原型类竞赛答辩。
+- 不伪造数据、获奖、系统能力或企业落地情况。
+- 不要求所有视觉元素都拆成形状：背景模板可以是一张高完成度图片，但真实截图、数据、标题和正文必须可替换、可编辑。
+- 每套完整 PPT 必须先做一张代表页，用户确认后再批量制作，避免整套成品走偏。
+
+欢迎提交通用、已获得发布权的版式经验与规范。贡献前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。

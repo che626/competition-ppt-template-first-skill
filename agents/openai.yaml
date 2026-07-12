@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competition PPT Template-First"
+  short_description: "Create premium competition decks through fact-grounded whole-slide templates and editable PPT layers"
+  default_prompt: "Use $competition-ppt-template-first to plan a fact-grounded competition defense deck, produce one signature template-first slide for approval, then build the editable PPT with real evidence and rendered QA."
