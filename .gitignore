@@ -1,0 +1,15 @@
+# Generated presentation artifacts should remain local unless intentionally added.
+*.pptx
+*.pdf
+*.mp4
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Local tooling and operating-system files.
+.DS_Store
+Thumbs.db
+__pycache__/
+.pytest_cache/
+*.pyc
