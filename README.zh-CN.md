@@ -57,6 +57,8 @@ $competition-ppt-template-first
 .\scripts\validate-distribution.ps1
 ```
 
+发布到 GitHub 后可追加 `-Remote`，再验证远端克隆与发现流程。
+
 ## 项目工作目录
 
 ```text

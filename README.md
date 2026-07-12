@@ -56,6 +56,8 @@ Maintainers can validate installer discovery before a release with:
 .\scripts\validate-distribution.ps1
 ```
 
+Use `-Remote` after publishing to test the GitHub clone path as well.
+
 ## Use It
 
 Attach the report, evidence images, and any reference deck, then use a prompt such as:

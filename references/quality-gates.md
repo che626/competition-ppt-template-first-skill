@@ -45,4 +45,4 @@ Before publishing a release, validate the package as an installer sees it:
 .\scripts\validate-distribution.ps1
 ```
 
-This verifies the YAML front matter and runs `npx skills add <owner/repo> --list`. A repository can look correct in GitHub while still being undiscoverable if `SKILL.md` front matter is malformed.
+This verifies the YAML front matter and runs the local package through `npx skills add <local-path> --list`. After the remote release is visible, add `-Remote` to verify the GitHub clone path as well. A repository can look correct in GitHub while still being undiscoverable if `SKILL.md` front matter is malformed.
