@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 - 2026-07-12
+
+- Fixed strict YAML parsing for `SKILL.md` discovery by the `skills` CLI.
+- Added a `skills.sh` installation-count badge and installer-discovery smoke test.
+
 ## 0.2.0 - 2026-07-12
 
 - Added an Agent Skill discovery descriptor at `agents/openai.yaml`.

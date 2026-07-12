@@ -37,3 +37,12 @@ Perform these checks on exported slide images, not just in the PowerPoint editor
 
 Archive only pages that pass the rendered visual review and are explicitly approved by the user.
 
+## Distribution check
+
+Before publishing a release, validate the package as an installer sees it:
+
+```powershell
+.\scripts\validate-distribution.ps1
+```
+
+This verifies the YAML front matter and runs `npx skills add <owner/repo> --list`. A repository can look correct in GitHub while still being undiscoverable if `SKILL.md` front matter is malformed.

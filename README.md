@@ -4,6 +4,7 @@
 [![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](references/workflow.md)
 [![PowerPoint](https://img.shields.io/badge/Output-editable%20PPTX-2563eb)](references/quality-gates.md)
 [![License](https://img.shields.io/badge/License-MIT-f59e0b)](LICENSE)
+[![skills.sh](https://skills.sh/b/che626/competition-ppt-template-first-skill)](https://skills.sh/che626/competition-ppt-template-first-skill)
 [![GitHub stars](https://img.shields.io/github/stars/che626/competition-ppt-template-first-skill?style=flat&logo=github&label=stars)](https://github.com/che626/competition-ppt-template-first-skill/stargazers)
 
 > A high-end competition deck should be **art-directed first, editable where it matters**.
@@ -48,6 +49,12 @@ npx -y skills@latest add che626/competition-ppt-template-first-skill \
 ```
 
 The skill entry point is [`SKILL.md`](SKILL.md). It is designed for Codex, Claude Code, Cursor, and other agents that recognize Agent Skills.
+
+Maintainers can validate installer discovery before a release with:
+
+```powershell
+.\scripts\validate-distribution.ps1
+```
 
 ## Use It
 

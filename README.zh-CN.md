@@ -3,6 +3,7 @@
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-111827)](SKILL.md)
 [![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](references/workflow.md)
 [![License](https://img.shields.io/badge/License-MIT-f59e0b)](LICENSE)
+[![skills.sh](https://skills.sh/b/che626/competition-ppt-template-first-skill)](https://skills.sh/che626/competition-ppt-template-first-skill)
 
 > 先把页面当作完整的视觉作品设计出来，再把关键内容做成可编辑 PPT。
 
@@ -49,6 +50,12 @@ $competition-ppt-template-first
 ```
 
 更多可直接复制的提示词见 [examples/prompt-recipes.md](examples/prompt-recipes.md)。
+
+发布前可运行下面的检查，确认 `skills` CLI 能真实识别该仓库，而不是只在 GitHub 页面上“看起来没问题”：
+
+```powershell
+.\scripts\validate-distribution.ps1
+```
 
 ## 项目工作目录
 

@@ -1,6 +1,6 @@
 ---
 name: competition-ppt-template-first
-description: Create polished, competition-grade defense PPTs through a template-first workflow: ground the narrative in source material, plan each slide, generate a complete visual template image, then rebuild it as an editable PPT with real evidence and strict visual QA. Use for innovation competitions, technical defenses, project showcases, and any deck that must look designed rather than assembled from generic cards.
+description: "Create polished, competition-grade defense PPTs through a template-first workflow: ground the narrative in source material, plan each slide, generate a complete visual template image, then rebuild it as an editable PPT with real evidence and strict visual QA. Use for innovation competitions, technical defenses, project showcases, and any deck that must look designed rather than assembled from generic cards."
 ---
 
 # Competition PPT: Template-First Workflow
