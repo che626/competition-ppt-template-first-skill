@@ -12,6 +12,13 @@ if ($content -notmatch '(?s)^---\s*\r?\nname:\s*competition-ppt-template-first\s
 }
 
 Write-Output "LOCAL_FRONT_MATTER=OK"
+Write-Output "Checking static package structure and Markdown links ..."
+
+python (Join-Path $PSScriptRoot "validate-package.py")
+if ($LASTEXITCODE -ne 0) {
+    throw "Static package validation failed."
+}
+
 Write-Output "Checking Skills CLI discovery against this local package ..."
 
 $root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path

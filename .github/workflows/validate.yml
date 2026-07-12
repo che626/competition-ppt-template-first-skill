@@ -1,0 +1,19 @@
+name: Validate Skill Package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Validate package structure and links
+        run: python skills/competition-ppt-template-first/scripts/validate-package.py
+      - name: Compile workspace initializer
+        run: python -m py_compile skills/competition-ppt-template-first/scripts/init-report-grounded-deck.py

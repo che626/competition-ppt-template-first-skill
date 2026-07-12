@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1 - 2026-07-12
+
+- Added release-maintenance validation for package structure, front matter, and local Markdown links.
+- Added a GitHub Actions workflow to run the static checks on every push and pull request.
+- Added `.gitattributes` to keep text files normalized as LF across operating systems.
+
 ## 0.4.0 - 2026-07-12
 
 - Moved the installable Skill into `skills/competition-ppt-template-first/`.
