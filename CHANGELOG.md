@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 - 2026-07-12
+
+- Moved the installable Skill into `skills/competition-ppt-template-first/`.
+- Ensured the `skills` CLI installs references, templates, examples, scripts, and discovery metadata with `SKILL.md`.
+- Kept the repository root as a GitHub-facing homepage and release surface.
+
 ## 0.3.0 - 2026-07-12
 
 - Added report-grounded defense-deck mode for turning project documents and evidence into a traceable PPT route.

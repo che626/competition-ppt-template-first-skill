@@ -1,8 +1,8 @@
 # Competition PPT Template-First Skill
 
-[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-111827)](SKILL.md)
-[![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](references/workflow.md)
-[![PowerPoint](https://img.shields.io/badge/Output-editable%20PPTX-2563eb)](references/quality-gates.md)
+[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-111827)](skills/competition-ppt-template-first/SKILL.md)
+[![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](skills/competition-ppt-template-first/references/workflow.md)
+[![PowerPoint](https://img.shields.io/badge/Output-editable%20PPTX-2563eb)](skills/competition-ppt-template-first/references/quality-gates.md)
 [![License](https://img.shields.io/badge/License-MIT-f59e0b)](LICENSE)
 [![skills.sh](https://skills.sh/b/che626/competition-ppt-template-first-skill)](https://skills.sh/che626/competition-ppt-template-first-skill)
 [![GitHub stars](https://img.shields.io/github/stars/che626/competition-ppt-template-first-skill?style=flat&logo=github&label=stars)](https://github.com/che626/competition-ppt-template-first-skill/stargazers)
@@ -41,7 +41,7 @@ report / proposal / requirements / data / screenshots
   -> editable defense PPT
 ```
 
-Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Read [`references/source-ingestion.md`](references/source-ingestion.md) for the full contract.
+Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Read [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) for the full contract.
 
 ## Why Template-First
 
@@ -55,7 +55,7 @@ Use it when the deck must stay faithful to a `.docx`, PDF, technical report, res
 
 ## Install
 
-Use any Skill-compatible agent installer, or copy this folder into the agent's skills directory. For installers based on the community `skills` CLI:
+Use any Skill-compatible agent installer, or copy `skills/competition-ppt-template-first/` into the agent's skills directory. For installers based on the community `skills` CLI:
 
 ```bash
 npx -y skills@latest add che626/competition-ppt-template-first-skill \
@@ -64,12 +64,12 @@ npx -y skills@latest add che626/competition-ppt-template-first-skill \
   --global
 ```
 
-The skill entry point is [`SKILL.md`](SKILL.md). It is designed for Codex, Claude Code, Cursor, and other agents that recognize Agent Skills.
+The skill entry point is [`skills/competition-ppt-template-first/SKILL.md`](skills/competition-ppt-template-first/SKILL.md). It is designed for Codex, Claude Code, Cursor, and other agents that recognize Agent Skills.
 
 Maintainers can validate installer discovery before a release with:
 
 ```powershell
-.\scripts\validate-distribution.ps1
+.\skills\competition-ppt-template-first\scripts\validate-distribution.ps1
 ```
 
 Use `-Remote` after publishing to test the GitHub clone path as well.
@@ -85,12 +85,12 @@ Use the supplied screenshots as real evidence. First produce the fact registry,
 slide map, and one representative template-first signature slide for approval.
 ```
 
-More copy-ready prompts are in [`examples/prompt-recipes.md`](examples/prompt-recipes.md).
+More copy-ready prompts are in [`prompt-recipes.md`](skills/competition-ppt-template-first/examples/prompt-recipes.md).
 
 To initialize the standard report-grounded workspace:
 
 ```text
-python scripts/init-report-grounded-deck.py ./my-competition-deck --source-folder ./project-materials
+python skills/competition-ppt-template-first/scripts/init-report-grounded-deck.py ./my-competition-deck --source-folder ./project-materials
 ```
 
 ## What the Skill Produces
@@ -106,24 +106,24 @@ competition-ppt/
   99_retired/    rejected variants kept for traceability
 ```
 
-The full folder convention is documented in [`references/project-conventions.md`](references/project-conventions.md).
+The full folder convention is documented in [`project-conventions.md`](skills/competition-ppt-template-first/references/project-conventions.md).
 
 ## Included Playbook
 
 | Resource | Purpose |
 | --- | --- |
-| [`SKILL.md`](SKILL.md) | Agent execution contract and mode selection |
-| [`references/workflow.md`](references/workflow.md) | Fact-to-deck production method |
-| [`references/source-ingestion.md`](references/source-ingestion.md) | Document intake, traceable fact extraction, and defense-route construction |
-| [`references/layout-archetypes.md`](references/layout-archetypes.md) | Competition-specific page structures |
-| [`references/prompt-library.md`](references/prompt-library.md) | Prompt patterns for visual templates |
-| [`references/quality-gates.md`](references/quality-gates.md) | Rendered PPT acceptance checks |
-| [`templates/deck-brief.md`](templates/deck-brief.md) | Deck-level planning template |
-| [`templates/source-manifest.md`](templates/source-manifest.md) | Inventory of reports, requirements, data, and assets |
-| [`templates/slide-source-map.md`](templates/slide-source-map.md) | Page-by-page mapping from source facts to judge conclusions |
-| [`templates/slide-blueprint.md`](templates/slide-blueprint.md) | Per-page content and layout blueprint |
-| [`templates/revision-record.md`](templates/revision-record.md) | Feedback-to-structural-revision log |
-| [`examples/ai-vision-defense-example.md`](examples/ai-vision-defense-example.md) | A generic 11-page AI vision map |
+| [`SKILL.md`](skills/competition-ppt-template-first/SKILL.md) | Agent execution contract and mode selection |
+| [`workflow.md`](skills/competition-ppt-template-first/references/workflow.md) | Fact-to-deck production method |
+| [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) | Document intake, traceable fact extraction, and defense-route construction |
+| [`layout-archetypes.md`](skills/competition-ppt-template-first/references/layout-archetypes.md) | Competition-specific page structures |
+| [`prompt-library.md`](skills/competition-ppt-template-first/references/prompt-library.md) | Prompt patterns for visual templates |
+| [`quality-gates.md`](skills/competition-ppt-template-first/references/quality-gates.md) | Rendered PPT acceptance checks |
+| [`deck-brief.md`](skills/competition-ppt-template-first/templates/deck-brief.md) | Deck-level planning template |
+| [`source-manifest.md`](skills/competition-ppt-template-first/templates/source-manifest.md) | Inventory of reports, requirements, data, and assets |
+| [`slide-source-map.md`](skills/competition-ppt-template-first/templates/slide-source-map.md) | Page-by-page mapping from source facts to judge conclusions |
+| [`slide-blueprint.md`](skills/competition-ppt-template-first/templates/slide-blueprint.md) | Per-page content and layout blueprint |
+| [`revision-record.md`](skills/competition-ppt-template-first/templates/revision-record.md) | Feedback-to-structural-revision log |
+| [`ai-vision-defense-example.md`](skills/competition-ppt-template-first/examples/ai-vision-defense-example.md) | A generic 11-page AI vision map |
 
 ## Design Position
 

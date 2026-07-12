@@ -1,7 +1,7 @@
 # 竞赛答辩 PPT：整页模板优先 Skill
 
-[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-111827)](SKILL.md)
-[![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](references/workflow.md)
+[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-111827)](skills/competition-ppt-template-first/SKILL.md)
+[![Workflow](https://img.shields.io/badge/Workflow-template--first-0f766e)](skills/competition-ppt-template-first/references/workflow.md)
 [![License](https://img.shields.io/badge/License-MIT-f59e0b)](LICENSE)
 [![skills.sh](https://skills.sh/b/che626/competition-ppt-template-first-skill)](https://skills.sh/che626/competition-ppt-template-first-skill)
 
@@ -37,10 +37,10 @@
 
 每一个关键结论都要绑定事实编号与文档定位，例如“报告 S-01，第 4.2 节”或“数据表 S-03，Metrics 工作表 B8:F12”。没有出处的内容不允许进入最终页；未来计划会被明确标为未来计划。
 
-完整流程见 [references/source-ingestion.md](references/source-ingestion.md)，可以用下面命令初始化工作目录：
+完整流程见 [source-ingestion.md](skills/competition-ppt-template-first/references/source-ingestion.md)，可以用下面命令初始化工作目录：
 
 ```text
-python scripts/init-report-grounded-deck.py .\my-competition-deck --source-folder .\project-materials
+python .\skills\competition-ppt-template-first\scripts\init-report-grounded-deck.py .\my-competition-deck --source-folder .\project-materials
 ```
 
 ## 关键方法
@@ -71,12 +71,12 @@ $competition-ppt-template-first
 再生成一张高完成度的代表页模板图，确认风格后再批量制作。
 ```
 
-更多可直接复制的提示词见 [examples/prompt-recipes.md](examples/prompt-recipes.md)。
+更多可直接复制的提示词见 [prompt-recipes.md](skills/competition-ppt-template-first/examples/prompt-recipes.md)。
 
 发布前可运行下面的检查，确认 `skills` CLI 能真实识别该仓库，而不是只在 GitHub 页面上“看起来没问题”：
 
 ```powershell
-.\scripts\validate-distribution.ps1
+.\skills\competition-ppt-template-first\scripts\validate-distribution.ps1
 ```
 
 发布到 GitHub 后可追加 `-Remote`，再验证远端克隆与发现流程。
@@ -94,7 +94,7 @@ competition-ppt/
   99_retired/    被淘汰的方案，保留用于追溯
 ```
 
-详细规范见 [references/project-conventions.md](references/project-conventions.md)。
+详细规范见 [project-conventions.md](skills/competition-ppt-template-first/references/project-conventions.md)。
 
 ## 适用场景
 
@@ -104,21 +104,21 @@ competition-ppt/
 
 ## 核心文件
 
-- [`SKILL.md`](SKILL.md)：给 AI 执行的完整流程
-- [`references/workflow.md`](references/workflow.md)：从材料到成品的详细方法
-- [`references/layout-archetypes.md`](references/layout-archetypes.md)：痛点、方案、模型、迭代、系统、奖项、规划等页面结构
-- [`references/source-ingestion.md`](references/source-ingestion.md)：读取作品文档、提取事实、建立答辩路线的方法
-- [`references/quality-gates.md`](references/quality-gates.md)：导出后的质检清单
-- [`templates/slide-blueprint.md`](templates/slide-blueprint.md)：逐页设计蓝图
-- [`templates/fact-registry.md`](templates/fact-registry.md)：事实与证据登记表
-- [`templates/deck-brief.md`](templates/deck-brief.md)：整套 PPT 的设计总控表
-- [`templates/source-manifest.md`](templates/source-manifest.md)：文档、要求、数据和素材的来源清单
-- [`templates/slide-source-map.md`](templates/slide-source-map.md)：每页结论与文档事实、真实证据的对应表
-- [`templates/revision-record.md`](templates/revision-record.md)：将用户反馈转成结构性修改的记录
+- [`SKILL.md`](skills/competition-ppt-template-first/SKILL.md)：给 AI 执行的完整流程
+- [`workflow.md`](skills/competition-ppt-template-first/references/workflow.md)：从材料到成品的详细方法
+- [`layout-archetypes.md`](skills/competition-ppt-template-first/references/layout-archetypes.md)：痛点、方案、模型、迭代、系统、奖项、规划等页面结构
+- [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md)：读取作品文档、提取事实、建立答辩路线的方法
+- [`quality-gates.md`](skills/competition-ppt-template-first/references/quality-gates.md)：导出后的质检清单
+- [`slide-blueprint.md`](skills/competition-ppt-template-first/templates/slide-blueprint.md)：逐页设计蓝图
+- [`fact-registry.md`](skills/competition-ppt-template-first/templates/fact-registry.md)：事实与证据登记表
+- [`deck-brief.md`](skills/competition-ppt-template-first/templates/deck-brief.md)：整套 PPT 的设计总控表
+- [`source-manifest.md`](skills/competition-ppt-template-first/templates/source-manifest.md)：文档、要求、数据和素材的来源清单
+- [`slide-source-map.md`](skills/competition-ppt-template-first/templates/slide-source-map.md)：每页结论与文档事实、真实证据的对应表
+- [`revision-record.md`](skills/competition-ppt-template-first/templates/revision-record.md)：将用户反馈转成结构性修改的记录
 
 ## 安装
 
-克隆仓库，或将整个文件夹放到 Codex 的 skills 目录；入口文件是 `SKILL.md`。
+克隆仓库，或将 `skills/competition-ppt-template-first/` 放到 Codex 的 skills 目录；入口文件是该目录内的 `SKILL.md`。
 
 仓库不包含真实项目截图、获奖证书或其他私密素材，只包含通用方法和匿名示例。
 
