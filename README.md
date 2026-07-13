@@ -7,41 +7,52 @@
 [![skills.sh](https://skills.sh/b/che626/competition-ppt-template-first-skill)](https://skills.sh/che626/competition-ppt-template-first-skill)
 [![GitHub stars](https://img.shields.io/github/stars/che626/competition-ppt-template-first-skill?style=flat&logo=github&label=stars)](https://github.com/che626/competition-ppt-template-first-skill/stargazers)
 
-> A high-end competition deck should be **art-directed first, editable where it matters**.
+> Start from the story and the evidence you have, then make the important parts editable.
 
 Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 
-`competition-ppt-template-first` is a reusable Agent Skill for high-stakes competition and defense PPTs. It replaces the usual "dark background + generic components + tiny text" workflow with a reliable sequence:
+`competition-ppt-template-first` is a reusable Agent Skill for competition and defense PPTs. It replaces the usual "dark background + generic components + tiny text" workflow with a practical sequence that can scale up when the source material is complete:
 
 ```mermaid
 flowchart LR
-    A[Source report<br/>screenshots and evidence] --> B[Fact registry]
-    B --> C[Story and slide map]
-    C --> D[Whole-slide visual template]
-    D --> E{Signature slide<br/>approved?}
-    E -- Revise --> D
-    E -- Yes --> F[Layered editable PPT]
-    F --> G[Render and visual QA]
-    G --> H[Approved-page archive]
+    A[Report, brief,<br/>screenshots and assets] --> B[Source checklist<br/>and usable facts]
+    B --> C[Story and slide plan]
+    C --> D[Template-first<br/>page design]
+    D --> E{Representative page<br/>looks right?}
+    E -- Refine --> D
+    E -- Yes --> F[Editable PPT<br/>with real evidence]
+    F --> G[Render and<br/>readability check]
+    G --> H[Approved files]
 ```
 
-The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update.
+The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. A full-page template is most valuable for cover, concept, pain-point, solution, award, and conclusion pages; dense technical pages can use a quieter layout instead.
 
-## New: Report-Grounded Deck Mode
+## Two Practical Levels
+
+Start with the level that matches the material on hand:
+
+| Level | Best for | What to do |
+| --- | --- | --- |
+| `Core workflow` | A topic, brief, a few screenshots, or an existing deck. | List available material, plan the page story, make a representative page, build editable slides, and check readability. |
+| `Report-grounded workflow` | A report, paper, data workbook, award evidence, or technical package. | Add a source manifest, fact registry, and slide-source map for the claims that need proof. |
+
+Both levels follow the same visual method. The report-grounded level adds traceability where numbers, model comparisons, awards, and technical claims need to withstand questions.
+
+## Report-Grounded Deck Mode
 
 Feed the project package, not just a topic. The skill converts source documents into a traceable defense route before it designs a page:
 
 ```text
 report / proposal / requirements / data / screenshots
   -> source manifest
-  -> fact registry with section and page locators
-  -> slide-source map
+  -> usable facts and evidence notes
+  -> source links for key claims
   -> judge-facing narrative
   -> signature slide
   -> editable defense PPT
 ```
 
-Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Read [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) for the full contract.
+Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Keep a precise source locator for metrics, comparisons, awards, and other claims likely to be challenged. Read [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) for the complete option.
 
 ## Why Template-First
 
@@ -81,8 +92,8 @@ Attach the report, evidence images, and any reference deck, then use a prompt su
 ```text
 $competition-ppt-template-first
 Read the project report and create an 11-page AI-vision competition defense deck.
-Use the supplied screenshots as real evidence. First produce the fact registry,
-slide map, and one representative template-first signature slide for approval.
+Use the supplied screenshots as real evidence. First summarize the usable facts,
+page plan, and one representative template-first page for approval.
 ```
 
 More copy-ready prompts are in [`prompt-recipes.md`](skills/competition-ppt-template-first/examples/prompt-recipes.md).
@@ -127,7 +138,7 @@ The full folder convention is documented in [`project-conventions.md`](skills/co
 
 ## Design Position
 
-Dense but controlled. Rich enough to feel competition-grade, calm enough to be read by judges. Use scenes, materials, visual evidence, light, and typographic scale to build interest. Avoid generic cyberpunk frames, repeated rounded-card walls, fake UI screenshots, illegible generated text, and body copy reduced to microscopic size.
+Clear before ornate. Use scenes, materials, real visual evidence, light, and typographic scale when they help the page. Keep dense pages calm and readable; keep low-text pages more visual. Avoid generic cyberpunk frames, repeated rounded-card walls, fake UI screenshots, illegible generated text, and body copy reduced to microscopic size.
 
 ## Scope and Limits
 
@@ -135,6 +146,7 @@ Dense but controlled. Rich enough to feel competition-grade, calm enough to be r
 - It is not a generic slide-template library or an automatic corporate-branding system.
 - It does not invent metrics, achievements, or product capabilities.
 - It intentionally keeps complex visual underlays as images when that is the best way to preserve quality; this is not the same as dropping a finished slide screenshot into PowerPoint.
+- It is a working method, not a promise that every project needs cinematic visuals, source tables, or a complicated production pipeline.
 
 ## Contributing
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.3 - 2026-07-13
+
+- Reframed the public workflow as a practical core path plus an optional report-grounded path.
+- Limited detailed source tracking to metrics, comparisons, awards, and other claims that need proof.
+- Clarified that full-page visual templates are most useful on visual-led pages, while dense technical pages may use quieter layouts.
+- Relaxed unnecessary production gates while preserving the no-fabrication rule and editable evidence layers.
+
 ## 0.4.2 - 2026-07-12
 
 - Fixed installed-package validation so unrelated global Skills are not scanned.

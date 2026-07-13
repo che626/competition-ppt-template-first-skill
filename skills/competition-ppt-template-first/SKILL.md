@@ -1,13 +1,13 @@
 ---
 name: competition-ppt-template-first
-description: "Create polished, competition-grade defense PPTs through a template-first workflow: ground the narrative in source material, plan each slide, generate a complete visual template image, then rebuild it as an editable PPT with real evidence and strict visual QA. Use for innovation competitions, technical defenses, project showcases, and any deck that must look designed rather than assembled from generic cards."
+description: "Create polished, competition-focused PPTs through a practical template-first workflow: organize available material, plan the story, design key pages as full visual templates, then build an editable PPT with real evidence and readability checks. Scales from simple project showcases to report-grounded technical defenses."
 ---
 
 # Competition PPT: Template-First Workflow
 
-Use this skill when a user wants an attractive, high-stakes competition or defense deck. The goal is not merely to fill a PPT with text. The goal is a coherent visual narrative in which every page looks intentionally art-directed while the important text and evidence remain editable.
+Use this skill when a user wants an attractive competition, defense, project-showcase, or course-presentation deck. The goal is not merely to fill a PPT with text. The goal is a coherent visual narrative in which the important text and evidence remain editable without making the workflow heavier than the project requires.
 
-Read `references/source-ingestion.md`, `references/workflow.md`, `references/layout-archetypes.md`, `references/project-conventions.md`, `references/prompt-library.md`, and `references/quality-gates.md` before creating slides.
+Read the references needed for the selected mode before creating slides. For report-grounded work, read `references/source-ingestion.md`, `references/workflow.md`, `references/project-conventions.md`, and `references/quality-gates.md`; use `references/layout-archetypes.md` and `references/prompt-library.md` when planning layouts and visual templates.
 
 ## The Core Principle
 
@@ -15,12 +15,12 @@ Do not start by assembling generic rectangles, UI lines, and text boxes directly
 
 Instead:
 
-1. Ingest the supplied report, requirements, data, and evidence into a traceable source map.
-2. Extract facts, evidence, constraints, and the answer the judges should remember.
-3. Build a slide blueprint before drawing anything.
-4. Generate or art-direct a **whole-slide visual template image** for each page.
-5. Turn the approved template into a layered PPT: background, real images, editable text, and only the overlays that need to remain editable.
-6. Render and inspect every page before calling it finished.
+1. Organize the supplied report, requirements, data, screenshots, and available evidence.
+2. Decide what the audience should remember and what each important page needs to prove.
+3. Build a concise slide plan before drawing anything.
+4. Generate or art-direct a **whole-slide visual template image** for visually important pages; keep dense technical pages quieter when that serves the content better.
+5. Turn the approved direction into a layered PPT: background, real images, editable text, and only the overlays that need to remain editable.
+6. Render and inspect the finished deck, or at least the key pages changed in the current pass.
 
 The image template supplies composition, atmosphere, light, material, visual rhythm, and high-end detailing. The PPT layer supplies factual text, real screenshots, charts, and evidence.
 
@@ -28,23 +28,23 @@ The image template supplies composition, atmosphere, light, material, visual rhy
 
 Pick the smallest mode that still preserves the template-first principle:
 
-| Mode | Use when | Required output |
+| Mode | Use when | Typical output |
 | --- | --- | --- |
-| `Full defense deck` | A report or project needs a complete competition presentation. | Fact registry, slide map, approved sample, layered PPT, rendered QA. |
-| `Report-grounded defense deck` | The user supplies a project report, proposal, paper, technical document, or requirements package and wants the PPT derived from it. | Source manifest, fact registry with source locators, slide-source map, approved sample, layered PPT, rendered QA. |
-| `Single signature slide` | The user wants to test a visual direction or repair a key page. | Slide blueprint, template image, editable PPT page, preview. |
+| `Core deck` | A topic, brief, screenshots, or an existing deck needs a coherent presentation. | Material note, slide plan, representative page where helpful, editable PPT, readability check. |
+| `Report-grounded defense deck` | The user supplies a report, paper, technical document, or requirements package and wants the PPT derived from it. | Source manifest, factual notes with locators for key claims, page-evidence map where needed, editable PPT, rendered check. |
+| `Single signature slide` | The user wants to test a visual direction or repair a key page. | Concise page plan, template or art direction, editable PPT page, preview. |
 | `Existing deck repair` | A PPT exists but its visual structure, content density, or evidence use is weak. | Diagnosis, rebuilt background template where necessary, revised editable page. |
 | `Image/PDF to editable` | The user already has an image-based page and needs native text/images. | Object-level reconstruction plan; do not claim full editability when only a background image is retained. |
 
-State the selected mode and the expected user approval point before producing non-trivial slide output.
+State the selected mode and the expected user approval point before producing a full deck or a major visual rebuild.
 
-## Non-Negotiable Rules
+## Default Guardrails
 
 - Facts, metrics, product capabilities, awards, and roadmap claims must come from the supplied source material. Never invent evidence to fill a layout.
-- Every non-trivial claim must have a source locator: document name plus section, page, table, figure, sheet, or asset identifier. A claim without a locator is not allowed onto a final slide.
+- Keep a source locator for metrics, model comparisons, awards, research findings, technical specifications, and other claims likely to be challenged. Keep ordinary narrative faithful to the source without forcing a complex citation system onto simple pages.
 - The input document is the factual source, not the final slide copy. Condense and rewrite it into judge-facing language; do not paste report paragraphs onto slides.
-- Every content slide has one primary claim. The title, evidence, and conclusion must all support that claim.
-- Put at least one credible visual anchor on every slide: a real screenshot, authentic sample image, measured chart, physical scene, or verified artifact.
+- Important content slides should have one primary claim. The title, evidence, and conclusion should support it.
+- Use a credible visual anchor on key content slides when evidence is available: a real screenshot, authentic sample image, measured chart, physical scene, or verified artifact.
 - A generated image is a visual template, not a substitute for evidence. Do not use synthetic screenshots in place of real product evidence.
 - Use richer, brighter visual templates on low-text pages. Use quieter, darker templates behind dense text or real screenshots.
 - Keep title placement and hierarchy consistent across the deck. Use a page number, title, and optional short subtitle; do not put the title in a heavy framed box.
@@ -52,22 +52,22 @@ State the selected mode and the expected user approval point before producing no
 - Do not use English-only labels for a Chinese defense deck unless the term is genuinely required.
 - Do not make body copy tiny merely to preserve a layout. Reflow the layout, shorten the copy, or use another archetype.
 - If the user rejects the composition or the background template, rebuild the **entire underlay**. Do not keep layering fixes on top of a flawed template.
-- After a page is confirmed, archive a copy and do not modify it unless the user explicitly reopens it.
+- When a page is confirmed, archive a copy before making any later alternative.
 
-## Required Workflow
+## Workflow
 
 ### 0. Ingest the project material
 
-When the user supplies a report or project folder, start in `Report-grounded defense deck` mode.
+When the user supplies a report or project folder, prefer `Report-grounded defense deck` mode. When material is light or incomplete, begin with `Core deck` mode and record what is still missing.
 
 1. Create the project folders with `scripts/init-report-grounded-deck.py` or manually follow `references/project-conventions.md`.
-2. Inventory every source in `templates/source-manifest.md`: report, requirements, data files, screenshots, prior PPTs, awards, videos, and external evidence.
+2. Inventory the available sources in `templates/source-manifest.md`: report, requirements, data files, screenshots, prior PPTs, awards, videos, and external evidence.
 3. Read each source using the appropriate document, PDF, spreadsheet, PPTX, or image workflow. Extract headings, verified numbers, figures, tables, diagrams, captions, and asset paths. Render visual documents when layout or figures matter.
-4. Record only usable facts in `templates/fact-registry.md`, including a stable fact ID and source locator.
-5. Create `templates/slide-source-map.md` before planning page visuals. Every page must state its primary conclusion, fact IDs, evidence IDs, and the transition from the previous page.
+4. Record usable facts in `templates/fact-registry.md`. Add stable fact IDs and source locators to claims that need proof.
+5. Create `templates/slide-source-map.md` for pages with metrics, comparisons, awards, or important technical claims. Record the primary conclusion, supporting facts/evidence, and the transition from the previous page.
 6. Put uncertain, missing, or contradictory information in a `do not claim` list. Ask one focused question only when the missing decision materially changes the deck; otherwise reserve a replaceable zone and continue.
 
-Do not generate page copy, comparison values, award claims, or system capabilities until this ingestion gate is complete.
+Do not finalize page copy, comparison values, award claims, or system capabilities until the available source material has been checked. For missing material, reserve a replaceable zone or mark it as a future plan instead of inventing evidence.
 
 ### 1. Establish the fact contract
 
@@ -90,7 +90,7 @@ Write the deck's judge takeaway in one sentence. Then create an ordered slide ma
 - `Editable layers`
 - `Risk to verify`
 
-Use `templates/slide-blueprint.md`. In report-grounded mode, every blueprint must include the fact IDs and evidence IDs from `templates/slide-source-map.md`.
+Use `templates/slide-blueprint.md`. In report-grounded mode, include fact IDs and evidence IDs for slides that make evidence-based claims.
 
 For a full deck, begin from `templates/deck-brief.md`, then create one slide blueprint per page. Keep the resulting files in the project structure described by `references/project-conventions.md`.
 
@@ -106,7 +106,7 @@ The deck should feel like one family, not the same layout repeated eleven times.
 
 ### 4. Generate the template image first
 
-Generate one 16:9 template image per slide before building the PPT. The prompt must specify:
+Generate a 16:9 template image for pages whose visual underlay matters, such as cover, pain-point, concept, solution, milestone, award, and conclusion pages. For dense technical, comparison, or screenshot pages, use a quieter template or a carefully designed native layout when that produces a clearer result. A template prompt should specify:
 
 - Subject matter and visual metaphor.
 - Where each information zone will be placed.
@@ -123,9 +123,9 @@ Use the appropriate page prompt in `references/prompt-library.md`; adapt the sub
 
 Show the template preview. Check whether it has enough room for the planned text and real evidence, whether it feels visually finished, and whether it belongs to the same deck.
 
-Do not convert an unapproved or visibly cramped template into a PPT. Regenerate it first.
+Do not convert a visibly cramped or structurally wrong template into a final PPT. Regenerate or simplify it first.
 
-For a full deck, generate exactly one representative **signature slide** first. It should be a real content page with the deck's expected density, not an empty cover. After the user approves its visual language, record the approved palette, title hierarchy, image treatment, and template-generation method in the project brief before creating the remaining pages.
+For a full deck with an unclear visual direction, make one representative **signature slide** first. It should be a real content page with the deck's expected density, not an empty cover. If the user has already supplied an approved deck or a clear visual reference, record the relevant palette, title hierarchy, and image treatment, then proceed directly.
 
 ### 6. Rebuild as a layered editable PPT
 
@@ -141,9 +141,9 @@ Do not chase full editability at the expense of visual quality. The factual cont
 
 ### 7. Render, inspect, revise, archive
 
-Render the actual PPT to images. Check it against `references/quality-gates.md`, then revise. Archive only versions the user has confirmed.
+Render the actual PPT to images when possible. Check the changed and high-risk pages against `references/quality-gates.md`, then revise. Archive versions the user has confirmed.
 
-For each revision, record: feedback, root cause, structural change, and output path using `templates/revision-record.md`. Do not replace a confirmed page without preserving an approved copy.
+For substantial revisions, record feedback, root cause, structural change, and output path using `templates/revision-record.md`. Do not replace a confirmed page without preserving an approved copy.
 
 ## Feedback Translation Rules
 
@@ -160,11 +160,11 @@ Translate user feedback into a design change, not a cosmetic patch:
 
 ## Completion Criteria
 
-A page is complete only when:
+A page is ready to deliver when:
 
 - It communicates one judge-relevant conclusion.
-- Every factual statement is grounded in source material and traceable through its fact ID and source locator.
-- It contains at least one credible visual anchor.
+- Important factual claims are grounded in source material and traceable through a fact ID and source locator when appropriate.
+- It uses a credible visual anchor when the page needs evidence and the material is available.
 - All important text is readable, aligned, and inside its intended region.
 - The page looks coherent in the rendered PPT, not merely in the editor.
 - No placeholder notes, design comments, generated gibberish, or accidental English labels remain.
