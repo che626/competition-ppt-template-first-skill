@@ -12,8 +12,8 @@ project documents and assets
   -> image-asset roles and deck style tokens
   -> content analysis: deck type, audience, story, visual ingredients, gaps
   -> extracted facts and evidence IDs
-  -> audience-facing narrative route
-  -> slide-source map and layout registry
+  -> audience-facing narrative route and speaker map
+  -> slide-source map, data-evidence plan, and layout registry with page rhythm
   -> page blueprints plus template contracts
   -> visual templates and editable PPT
   -> rendered visual critique and fix-verification
@@ -58,7 +58,11 @@ real problem -> why existing practice breaks -> design response -> proof -> comp
 
 Do not lead with architecture, model names, or feature lists unless the judges already know why they matter. For each slide, write one sentence that the audience should remember. If the sentence cannot be stated, the slide is not yet ready for layout.
 
-Before a page blueprint, create a slide-source map. The map links a page's conclusion to fact IDs, evidence IDs, and its speaker transition. It is the bridge between a long report and a concise defense deck.
+Before a page blueprint, create a slide-source map. The map links a page's conclusion to fact IDs, evidence IDs, any data-evidence plan, and its speaker transition. It is the bridge between a long report and a concise defense deck.
+
+Complete `templates/speaker-map.md` after the source map. Use it to separate the audience-facing assertion and evidence from the presenter’s interpretation, time budget, transition, and likely judge question. Do not put the entire spoken explanation into visible body copy.
+
+Complete `templates/data-evidence-plan.md` for model comparisons, test results, charts, metrics, and quantitative claims. A chart is evidence only when its data source, unit, scope, comparison baseline, conclusion, and caveat are recorded.
 
 ## 4. Make a page blueprint and a template contract
 
@@ -74,7 +78,7 @@ Use `templates/slide-blueprint.md`. A blueprint must answer:
 - Is the template light, mid, or dark, and why?
 - What must the template avoid?
 
-Before the first page template, complete `templates/deck-style-tokens.md` and `templates/image-asset-register.md`. For every planned slide, add a row to `templates/layout-registry.md`: page role, layout family, reading order, primary visual anchor, asset slot, word budget, contrast mode, and structural relation to the previous page.
+Before the first page template, complete `templates/deck-style-tokens.md` and `templates/image-asset-register.md`. For every planned slide, add a row to `templates/layout-registry.md`: page role, page rhythm, layout family, reading order, primary visual anchor, asset slot, word budget, contrast mode, and structural relation to the previous page.
 
 Do not repeat the same layout family more than twice in a row. The deck may vary its composition, but not its token system without a documented reason.
 
@@ -98,6 +102,7 @@ Vary these between pages:
 - Evidence arrangement
 - Ratio of image to text
 - Template archetype
+- Page rhythm: `anchor`, `dense`, or `breathing`
 
 ## 6. Design the whole slide before editing text
 

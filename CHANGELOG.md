@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0 - 2026-07-14
+
+- Added a lightweight speaker map inspired by audience-centered presentation design: every slide now separates audience-visible assertion/evidence from spoken explanation, time budget, transition, likely question, and backup material.
+- Added a data-evidence plan for model comparisons, metrics, charts, tests, and deployment claims; it records source IDs, scope, units, baseline, conclusion, and material caveats.
+- Added `anchor`, `dense`, and `breathing` page rhythm to the layout registry so a deck can vary information load and visual weight without abandoning the template-first visual system.
+- Extended workspace initialization, blueprinting, quality gates, validation, and public documentation to include the three additions without introducing a second rendering workflow.
+
 ## 0.7.0 - 2026-07-14
 
 - Added deck style tokens for color, typography, spacing, image treatment, and contrast rhythm; pages may no longer introduce arbitrary visual values without a recorded exception.

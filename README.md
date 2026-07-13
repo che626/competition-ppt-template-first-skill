@@ -17,14 +17,15 @@ Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 flowchart LR
     A[Report, brief,<br/>screenshots and assets] --> B[Content analysis<br/>and visual inventory]
     B --> C[Story route, asset roles,<br/>and deck style tokens]
-    C --> D[Layout registry and per-page<br/>template contracts]
-    D --> E[Template images<br/>and composition review]
-    E --> F[Editable PPT<br/>with real evidence]
-    F --> G[Rendered visual critique<br/>and fix verification]
-    G --> H[Approved files]
+    C --> D[Speaker map, evidence plan,<br/>and page rhythm]
+    D --> E[Layout registry and per-page<br/>template contracts]
+    E --> F[Template images<br/>and composition review]
+    F --> G[Editable PPT<br/>with real evidence]
+    G --> H[Rendered visual critique<br/>and fix verification]
+    H --> I[Approved files]
 ```
 
-The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Before page production, the Skill locks a deck token system, assigns every image a truth-aware role, and registers the layout rhythm across the deck. Every page is planned first: content grouping, background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. Then every content page receives a bespoke whole-slide template image generated from that plan. Dense technical pages still receive a quieter generated template, not a flat or card-only exception. Cover and closing pages use separate hero/conclusion template rules.
+The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Before page production, the Skill locks a deck token system, assigns every image a truth-aware role, plans a speaker map, records data evidence for quantitative claims, and registers `anchor` / `dense` / `breathing` page rhythm across the deck. Every page is planned first: content grouping, background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. Then every content page receives a bespoke whole-slide template image generated from that plan. Dense technical pages still receive a quieter generated template, not a flat or card-only exception. Cover and closing pages use separate hero/conclusion template rules.
 
 ## Two Practical Levels
 
@@ -32,8 +33,8 @@ Start with the level that matches the material on hand:
 
 | Level | Best for | What to do |
 | --- | --- | --- |
-| `Core workflow` | A topic, brief, a few screenshots, or an existing deck. | Analyze the desired outcome, story type, and visual ingredients; define a template contract for every page; build editable slides and check readability. |
-| `Report-grounded workflow` | A report, paper, data workbook, award evidence, or technical package. | Add a source manifest, content analysis, fact registry, slide-source map, and per-page template contracts for claims that need proof. |
+| `Core workflow` | A topic, brief, a few screenshots, or an existing deck. | Analyze the desired outcome, story type, and visual ingredients; define a template contract, page rhythm, and visible-versus-spoken plan for every page; build editable slides and check readability. |
+| `Report-grounded workflow` | A report, paper, data workbook, award evidence, or technical package. | Add a source manifest, content analysis, fact registry, slide-source map, speaker map, and data-evidence plan for claims that need proof. |
 
 Both levels follow the same visual method. The report-grounded level adds traceability where numbers, model comparisons, awards, and technical claims need to withstand questions. Neither level defaults to a dark-blue cyber style: palette, background scene, product/material cues, and light/dark distribution are selected from the subject.
 
@@ -47,7 +48,9 @@ report / proposal / requirements / data / screenshots
   -> content analysis: deck type, audience, story, visual ingredients, gaps
   -> usable facts and source links for key claims
   -> judge-facing narrative
-  -> page/template contracts
+  -> speaker map: what the judge sees versus what the presenter explains
+  -> data-evidence plan for comparisons, metrics, and test results
+  -> page rhythm and page/template contracts
   -> representative template
   -> editable defense PPT
 ```
@@ -93,8 +96,9 @@ Attach the report, evidence images, and any reference deck, then use a prompt su
 $competition-ppt-template-first
 Read the project report and create an 11-page AI-vision competition defense deck.
 Use the supplied screenshots as real evidence. First produce a content-to-deck analysis,
-the story route, and a template contract for every page: background scene, primary visual,
-real-image slots, text zones, supporting visual ingredients, and avoid list. Then make one
+the story route, a speaker map, and a template contract for every page: background scene,
+primary visual, real-image slots, text zones, supporting visual ingredients, page rhythm,
+and avoid list. Make a data-evidence plan for model comparisons or metrics. Then make one
 representative template-first page for approval.
 ```
 
@@ -111,7 +115,7 @@ python skills/competition-ppt-template-first/scripts/init-report-grounded-deck.p
 ```text
 competition-ppt/
   00_intake/     source manifest, extraction notes, image asset roles, original-asset references
-  00_plan/       content analysis, fact registry, deck brief, style tokens, layout registry, slide-source map, page blueprints
+  00_plan/       content analysis, fact registry, deck brief, style tokens, speaker map, data-evidence plan, layout registry, slide-source map, page blueprints
   01_templates/  approved 16:9 template images and prompt records
   02_build/      editable PPTX work files
   03_renders/    exported previews, rendered visual critique, and QA notes
@@ -138,7 +142,9 @@ The full folder convention is documented in [`project-conventions.md`](skills/co
 | [`deck-brief.md`](skills/competition-ppt-template-first/templates/deck-brief.md) | Deck-level planning template |
 | [`deck-style-tokens.md`](skills/competition-ppt-template-first/templates/deck-style-tokens.md) | Deck token control sheet |
 | [`image-asset-register.md`](skills/competition-ppt-template-first/templates/image-asset-register.md) | Image truth role and transformation register |
-| [`layout-registry.md`](skills/competition-ppt-template-first/templates/layout-registry.md) | Page rhythm and layout-family registry |
+| [`speaker-map.md`](skills/competition-ppt-template-first/templates/speaker-map.md) | Keeps audience-visible proof separate from spoken explanation, timing, transitions, and backup material |
+| [`data-evidence-plan.md`](skills/competition-ppt-template-first/templates/data-evidence-plan.md) | Grounds model comparisons, tests, metrics, and charts in source, unit, scope, conclusion, and caveat |
+| [`layout-registry.md`](skills/competition-ppt-template-first/templates/layout-registry.md) | Page rhythm (`anchor` / `dense` / `breathing`) and layout-family registry |
 | [`rendered-visual-critique.md`](skills/competition-ppt-template-first/templates/rendered-visual-critique.md) | Render-review record and fix-verification log |
 | [`content-analysis.md`](skills/competition-ppt-template-first/templates/content-analysis.md) | Required analysis of deck type, audience decision, visual ingredients, style rationale, and gaps |
 | [`source-manifest.md`](skills/competition-ppt-template-first/templates/source-manifest.md) | Inventory of reports, requirements, data, and assets |

@@ -18,7 +18,7 @@ Instead:
 1. Split the supplied report, requirements, screenshots, data, and user requests into a content-to-deck analysis.
 2. Decide what kind of deck it is, who must be convinced, what the story route is, and what must visibly appear on every page.
 3. Lock the deck style tokens and register each image as style reference, template source, real evidence, replaceable screenshot, or decorative cutout.
-4. Build a slide map, layout registry, and template contract for every page before drawing anything.
+4. Build a slide map, speaker map, layout registry with page rhythm, and template contract for every page before drawing anything. Create a data-evidence plan for every quantitative or comparison claim.
 5. After that page's contract is complete, generate or art-direct one **whole-slide visual template image for every page**. The template must include the required visual anchor, real-asset zones, text zones, and subject-specific visual ingredients.
 6. Turn the approved templates into a layered PPT: background, real images, editable text, and only the overlays that need to remain editable.
 7. Render, critique composition/hierarchy/density/typography, fix at least one observed defect when needed, and re-inspect the affected pages.
@@ -47,6 +47,8 @@ State the selected mode and the expected user approval point before producing a 
 - Keep a source locator for metrics, model comparisons, awards, research findings, technical specifications, and other claims likely to be challenged. Keep ordinary narrative faithful to the source without forcing a complex citation system onto simple pages.
 - The input document is the factual source, not the final slide copy. Condense and rewrite it into judge-facing language; do not paste report paragraphs onto slides.
 - Important content slides should have one primary claim. The title, evidence, and conclusion should support it.
+- Complete `templates/speaker-map.md` before final page copy. Keep the audience-facing assertion and evidence on the slide; put explanation, timing, transitions, and likely questions in the presenter plan.
+- Complete `templates/data-evidence-plan.md` before presenting any model comparison, metric, test result, chart, or quantitative deployment claim. Preserve the source, unit, scope, baseline, conclusion, and material caveat.
 - Use a credible visual anchor on key content slides when evidence is available: a real screenshot, authentic sample image, measured chart, physical scene, or verified artifact.
 - A generated image is a visual template, not a substitute for evidence. Do not use synthetic screenshots in place of real product evidence.
 - Complete `templates/deck-style-tokens.md` before page-template production. Treat its color, type, spacing, image-treatment, and contrast-rhythm decisions as the deck's source of truth.
@@ -57,6 +59,7 @@ State the selected mode and the expected user approval point before producing a 
 - Do not default to black, navy, cyan glow, HUD lines, English micro-labels, or a cyber style because the project mentions AI. Choose color, material, light, and scene from the subject and use light, mid, and dark pages deliberately.
 - Use richer, brighter visual templates on low-text pages. Use quieter, darker templates behind dense text or real screenshots.
 - Vary composition while keeping deck tokens stable. Do not use one layout family more than twice in a row; record every page choice in `templates/layout-registry.md`.
+- Record page rhythm as `anchor`, `dense`, or `breathing` in `templates/layout-registry.md`; it controls visual weight and information load without changing the template-first requirement.
 - Keep title placement and hierarchy consistent across the deck. Use a page number, title, and optional short subtitle; do not put the title in a heavy framed box.
 - Avoid generic HUD line art, repeated rounded cards, thick cyan outlines, empty grids, oversized decorative spheres, and a wall of identical components.
 - Do not use English-only labels for a Chinese defense deck unless the term is genuinely required.
@@ -77,7 +80,8 @@ When the user supplies a report or project folder, prefer `Report-grounded defen
 5. Record usable facts in `templates/fact-registry.md`. Add stable fact IDs and source locators to claims that need proof.
 6. Complete `templates/image-asset-register.md`; give every image a role and record any invariant that must be preserved.
 7. Create `templates/slide-source-map.md` for all proposed pages. Record the primary conclusion, supporting facts/evidence, required real asset, visual role, and transition from the previous page.
-8. Put uncertain, missing, or contradictory information in a `do not claim` list. Ask at most two focused questions when the missing answer changes the narrative, required real asset, or visual direction; otherwise reserve a replaceable zone and continue.
+8. Complete `templates/speaker-map.md` so visible copy, spoken explanation, time budget, and likely questions do not compete. Complete `templates/data-evidence-plan.md` for quantitative or comparison pages.
+9. Put uncertain, missing, or contradictory information in a `do not claim` list. Ask at most two focused questions when the missing answer changes the narrative, required real asset, or visual direction; otherwise reserve a replaceable zone and continue.
 
 Do not finalize page copy, comparison values, award claims, system capabilities, or page templates until the available source material and content analysis have been checked. For missing material, reserve a replaceable zone or mark it as a future plan instead of inventing evidence.
 
@@ -102,7 +106,7 @@ Write the deck's judge takeaway in one sentence. Then create an ordered slide ma
 - `Editable layers`
 - `Risk to verify`
 
-Use `templates/slide-blueprint.md`. For every slide, complete the template contract: page role, background scene, primary visual, supporting visual ingredients, exact real-asset slots, text zones, editable overlays, contrast mode, and avoid list. Add a matching row in `templates/layout-registry.md`, including layout family, reading order, entry point, asset slots, word budget, contrast mode, and structural relation to the previous page. In report-grounded mode, include fact IDs and evidence IDs for slides that make evidence-based claims.
+Use `templates/slide-blueprint.md`. For every slide, complete the template contract: page role, background scene, primary visual, supporting visual ingredients, exact real-asset slots, text zones, editable overlays, contrast mode, and avoid list. Add a matching row in `templates/layout-registry.md`, including layout family, page rhythm, reading order, entry point, asset slots, word budget, contrast mode, and structural relation to the previous page. In report-grounded mode, include fact IDs and evidence IDs for slides that make evidence-based claims.
 
 For a full deck, begin from `templates/deck-brief.md`, then create one slide blueprint per page. Keep the resulting files in the project structure described by `references/project-conventions.md`.
 
@@ -150,6 +154,12 @@ Do not convert a visibly cramped or structurally wrong template into a final PPT
 
 For a full deck with an unclear visual direction, make one representative **signature slide** first. It should be a real content page with the deck's expected density, visual ingredients, and real-asset slots, not an empty cover. If the user has already supplied an approved deck or a clear visual reference, record the relevant palette, title hierarchy, image treatment, and contrast distribution, then proceed directly.
 
+### 5.5 Keep the defense speakable
+
+Complete `templates/speaker-map.md` before locking page copy. The page should show what is difficult to say quickly: the assertion, real evidence, chart, interface state, or visual relationship. The presenter should explain why it matters, connect to the previous page, state limitations when needed, and answer likely questions from a prepared backup artifact. Do not turn visible body copy into a full script.
+
+For a slide with a model comparison, experiment result, metric, chart, or test claim, complete `templates/data-evidence-plan.md` before finalizing the visual template or chart. The source values and conclusion must agree with the fact registry and the finished slide.
+
 ### 6. Rebuild as a layered editable PPT
 
 Use this layer order:
@@ -189,6 +199,7 @@ A page is ready to deliver when:
 - Its content role, visual anchor, real-asset slots, text zones, and background scene were planned in a page/template contract before production.
 - Its whole-slide background template image was generated or art-directed from that contract after the layout analysis, including for quiet technical pages.
 - It follows the current deck style tokens, image-asset roles, and registered layout family or has a documented exception.
+- Its page rhythm, visible-versus-spoken split, and quantitative evidence plan are recorded when those controls apply.
 - Important factual claims are grounded in source material and traceable through a fact ID and source locator when appropriate.
 - It uses a credible visual anchor when the page needs evidence and the material is available.
 - All important text is readable, aligned, and inside its intended region.

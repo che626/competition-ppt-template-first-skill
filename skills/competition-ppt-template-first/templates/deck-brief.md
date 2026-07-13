@@ -10,6 +10,7 @@ Complete this before creating slide blueprints or template images.
 - Competition / track:
 - Audience and judging focus:
 - Target page count and presentation duration:
+- Expected speaking pace and backup-question allowance:
 - User's requested outcome and visual references:
 
 ## One-sentence judge takeaway
@@ -57,8 +58,10 @@ Complete this before creating slide blueprints or template images.
 - Deck style token version:
 - Color, type, spacing, and image-treatment source of truth: `deck-style-tokens.md`
 - Image asset register completed: [yes / no]
+- Speaker map completed before final copy: [yes / no]
+- Data-evidence plan completed for quantitative/comparison pages: [yes / no / not applicable]
 - Maximum consecutive uses of one layout family: 2
-- Planned visual rhythm and structural breaks:
+- Planned visual rhythm and structural breaks: [anchor / dense / breathing]
 
 ## Non-negotiable constraints
 

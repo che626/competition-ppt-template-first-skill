@@ -16,7 +16,9 @@ competition-ppt/
     deck-brief.md
     deck-style-tokens.md
     fact-registry.md
+    data-evidence-plan.md
     slide-source-map.md
+    speaker-map.md
     layout-registry.md
     slide-map.md
     revision-record.md
@@ -64,8 +66,8 @@ competition-ppt/
 For a full deck, communicate one active stage at a time:
 
 1. Source intake and content analysis
-2. Fact registry, narrative route, and slide-source map
-3. Style tokens, image roles, layout registry, and page/template contracts
+2. Fact registry, narrative route, data-evidence plan, slide-source map, and speaker map
+3. Style tokens, image roles, page rhythm, layout registry, and page/template contracts
 4. Representative-template approval and template production
 5. Editable PPT build, rendered visual critique, and approved archive
 

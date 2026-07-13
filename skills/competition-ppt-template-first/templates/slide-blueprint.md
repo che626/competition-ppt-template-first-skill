@@ -21,6 +21,9 @@ Copy this file once per slide before generating a template image.
 - Deck style token version:
 - Image asset IDs and roles:
 - Layout-registry row / layout family:
+- Page rhythm: [anchor / dense / breathing]
+- Speaker-map row and time budget:
+- Data-evidence-plan ID: [required for quantitative/comparison claims / not applicable]
 
 ### Content plan
 - Title: [maximum 16 Chinese characters preferred]

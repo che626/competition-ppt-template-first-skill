@@ -35,7 +35,15 @@ Perform these checks on exported slide images, not just in the PowerPoint editor
 - Every page names the token version and does not introduce arbitrary one-off colors, font sizes, or frame styles without a recorded exception.
 - `image-asset-register.md` gives every image a role; real evidence and screenshots retain their truth status and recognizable region.
 - `layout-registry.md` records each page's reading order and primary visual anchor.
+- Every layout-registry row declares `anchor`, `dense`, or `breathing` page rhythm and uses it intentionally.
 - No layout family appears more than twice consecutively unless the deck explicitly records and justifies the exception.
+
+## Speaker and data-evidence integrity
+
+- `speaker-map.md` separates visible assertion/evidence from spoken explanation, time budget, transition, and prepared backup material.
+- No visible slide body is a full presenter script.
+- `data-evidence-plan.md` exists for every quantitative or comparison slide and records source IDs, metric, unit, scope, baseline, visual form, conclusion, and material caveat.
+- A model comparison, chart, or test-result page does not imply an unsupported conclusion or use invented values.
 
 ## Template-first integrity
 

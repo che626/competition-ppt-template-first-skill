@@ -27,6 +27,7 @@ REQUIRED_FILES = (
     "templates/deck-brief.md",
     "templates/deck-style-tokens.md",
     "templates/content-analysis.md",
+    "templates/data-evidence-plan.md",
     "templates/fact-registry.md",
     "templates/image-asset-register.md",
     "templates/layout-registry.md",
@@ -35,8 +36,10 @@ REQUIRED_FILES = (
     "templates/slide-source-map.md",
     "templates/source-manifest.md",
     "templates/revision-record.md",
+    "templates/speaker-map.md",
     "scripts/init-report-grounded-deck.py",
     "scripts/validate-distribution.ps1",
+    "scripts/test-workspace-contract.py",
 )
 
 MARKDOWN_LINK = re.compile(r"\]\(([^)#]+)(?:#[^)]+)?\)")
@@ -47,21 +50,36 @@ WORKFLOW_CONTRACT = {
         "image-asset-register.md",
         "layout-registry.md",
         "rendered-visual-critique.md",
+        "speaker-map.md",
+        "data-evidence-plan.md",
+        "page rhythm",
     ),
     "references/quality-gates.md": (
         "Deck-control integrity",
         "Rendered visual critique",
         "No layout family appears more than twice consecutively",
+        "Speaker and data-evidence integrity",
     ),
     "templates/slide-blueprint.md": (
         "Deck controls used on this page",
         "Entry point and eye flow",
+        "Page rhythm",
+        "Speaker-map row and time budget",
+        "Data-evidence-plan ID",
     ),
     "scripts/init-report-grounded-deck.py": (
         "deck-style-tokens.md",
         "image-asset-register.md",
         "layout-registry.md",
         "rendered-visual-critique.md",
+        "speaker-map.md",
+        "data-evidence-plan.md",
+    ),
+    "templates/layout-registry.md": (
+        "Page rhythm",
+        "anchor",
+        "dense",
+        "breathing",
     ),
 }
 

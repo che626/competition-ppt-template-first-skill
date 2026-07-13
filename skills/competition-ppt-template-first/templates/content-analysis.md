@@ -21,6 +21,7 @@ Complete this after reading the supplied material and before generating page tem
   4.
   5.
 - What must not become the main story:
+- Expected presentation duration and speaker-map requirement:
 
 ## 3. Material split
 
@@ -63,6 +64,7 @@ Complete this after reading the supplied material and before generating page tem
 - Shared spacing and image-treatment rules:
 - Pages that need a rich scene:
 - Pages that need a quiet evidence background:
+- Planned page rhythm: [anchor / dense / breathing]:
 - Forbidden default patterns:
 
 ## 6. Questions or assumptions
@@ -75,4 +77,5 @@ Complete this after reading the supplied material and before generating page tem
 - Confirmed narrative route:
 - Confirmed visual system:
 - First template page to generate:
+- Speaker-map and data-evidence-plan scope confirmed:
 ```

@@ -18,10 +18,11 @@
 1. 先整理报告、附件、截图、数据中能用的内容和待补材料，判断这是答辩、产品展示、技术汇报还是研究说明。
 2. 先写清楚受众、要达成的判断、叙事路线，以及项目本身可以成为画面的产品、场景、材质、设备、人物、样本或证据。
 3. 先锁定整套 PPT 的设计令牌：颜色、字号、间距、图片装帧、标题位置和深浅页面节奏；再登记每张图片是风格参考、底图来源、真实证据、可替换截图还是装饰物件。
-4. 为每页写清楚：本页结论与内容分组、阅读顺序、视觉重心、背景图是什么、主图是什么、有什么辅助视觉物件、真实图片放哪里、文字放哪里、哪些内容必须可编辑、这一页禁止出现什么；并登记它与前后页的版式关系。
-5. 所有内容页都必须在布局确定后，生成或设计一张专属的整页背景模板图；技术信息密集页也要生成安静、留白明确的模板图，不得改回纯底色加原生卡片。封面和结尾页使用独立的主视觉模板。
-6. 模板确认后，将其作为底层背景，再放入真实证据图片、可编辑文字和少量可替换覆盖层。
-7. 导出重点页面，按构图、视觉层级、信息密度和字体四项逐页检查；修正重大问题后再次导出，再归档满意版本。
+4. 先建立讲解映射：屏幕上只保留评委需要看到的结论与真实证据；把解释、过渡、时间安排和可能追问放入讲解计划。模型对比、数据和图表还要登记来源、单位、范围、结论与必要的限制说明。
+5. 为每页写清楚：本页结论与内容分组、阅读顺序、视觉重心、背景图是什么、主图是什么、有什么辅助视觉物件、真实图片放哪里、文字放哪里、哪些内容必须可编辑、页面节奏是 `anchor`、`dense` 还是 `breathing`、这一页禁止出现什么；并登记它与前后页的版式关系。
+6. 所有内容页都必须在布局确定后，生成或设计一张专属的整页背景模板图；技术信息密集页也要生成安静、留白明确的模板图，不得改回纯底色加原生卡片。封面和结尾页使用独立的主视觉模板。
+7. 模板确认后，将其作为底层背景，再放入真实证据图片、可编辑文字和少量可替换覆盖层。
+8. 导出重点页面，按构图、视觉层级、信息密度、字体、可讲性和数据证据六项逐页检查；修正重大问题后再次导出，再归档满意版本。
 
 ## 两种使用深度
 
@@ -42,7 +43,9 @@
   -> 内容分析：PPT 类型、受众、叙事、视觉元素、缺失项
   -> 可用事实与重点结论的来源对应
   -> 面向评委的答辩叙事路线
-  -> 设计令牌、图片角色与每页版式登记
+  -> 讲解映射：屏幕展示什么、讲解者补充什么、时间与备答
+  -> 数据证据计划：模型对比、指标、图表的来源、范围与结论
+  -> 设计令牌、图片角色、页面节奏与每页版式登记
   -> 每页模板契约
   -> 代表页模板图
   -> 可编辑答辩 PPT
@@ -102,7 +105,7 @@ $competition-ppt-template-first
 ```text
 competition-ppt/
   00_intake/     来源清单、提取笔记、图片角色、原始素材引用
-  00_plan/       内容分析、事实登记表、设计令牌、版式登记、叙事主线、页级事实映射、逐页蓝图
+  00_plan/       内容分析、事实登记表、设计令牌、讲解映射、数据证据计划、版式登记、叙事主线、页级事实映射、逐页蓝图
   01_templates/  已确认的整页模板图与提示词记录
   02_build/      可编辑 PPTX 制作文件
   03_renders/    PPT 导出预览、四维美术复查与检查记录
@@ -128,6 +131,9 @@ competition-ppt/
 - [`quality-gates.md`](skills/competition-ppt-template-first/references/quality-gates.md)：导出后的质检清单
 - [`slide-blueprint.md`](skills/competition-ppt-template-first/templates/slide-blueprint.md)：逐页设计蓝图
 - [`fact-registry.md`](skills/competition-ppt-template-first/templates/fact-registry.md)：事实与证据登记表
+- [`speaker-map.md`](skills/competition-ppt-template-first/templates/speaker-map.md)：区分屏幕展示、讲解补充、时间安排、转场与备答
+- [`data-evidence-plan.md`](skills/competition-ppt-template-first/templates/data-evidence-plan.md)：模型对比、测试、指标与图表的证据计划
+- [`layout-registry.md`](skills/competition-ppt-template-first/templates/layout-registry.md)：页面节奏（`anchor` / `dense` / `breathing`）和版式关系登记
 - [`deck-brief.md`](skills/competition-ppt-template-first/templates/deck-brief.md)：整套 PPT 的设计总控表
 - [`content-analysis.md`](skills/competition-ppt-template-first/templates/content-analysis.md)：PPT 类型、受众决策、视觉元素、风格依据、问题与假设的分析表
 - [`source-manifest.md`](skills/competition-ppt-template-first/templates/source-manifest.md)：文档、要求、数据和素材的来源清单

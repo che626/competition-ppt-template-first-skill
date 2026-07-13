@@ -12,6 +12,7 @@ TEMPLATE_NAMES = (
     "content-analysis.md",
     "deck-brief.md",
     "deck-style-tokens.md",
+    "data-evidence-plan.md",
     "fact-registry.md",
     "image-asset-register.md",
     "layout-registry.md",
@@ -20,6 +21,7 @@ TEMPLATE_NAMES = (
     "slide-source-map.md",
     "slide-blueprint.md",
     "revision-record.md",
+    "speaker-map.md",
 )
 
 
@@ -58,6 +60,7 @@ def main() -> None:
         "content-analysis.md": directories["00_plan"] / "content-analysis.md",
         "deck-brief.md": directories["00_plan"] / "deck-brief.md",
         "deck-style-tokens.md": directories["00_plan"] / "deck-style-tokens.md",
+        "data-evidence-plan.md": directories["00_plan"] / "data-evidence-plan.md",
         "fact-registry.md": directories["00_plan"] / "fact-registry.md",
         "image-asset-register.md": directories["00_intake"] / "image-asset-register.md",
         "layout-registry.md": directories["00_plan"] / "layout-registry.md",
@@ -66,6 +69,7 @@ def main() -> None:
         "slide-source-map.md": directories["00_plan"] / "slide-source-map.md",
         "slide-blueprint.md": directories["00_plan"] / "slide-blueprint.md",
         "revision-record.md": directories["00_plan"] / "revision-record.md",
+        "speaker-map.md": directories["00_plan"] / "speaker-map.md",
     }
     for name in TEMPLATE_NAMES:
         target = destinations[name]
@@ -89,11 +93,12 @@ def main() -> None:
             "1. Fill `00_intake/source-manifest.md`.\n"
             "2. Split the material into a deck decision in `00_plan/content-analysis.md` and register images in `00_intake/image-asset-register.md`.\n"
             "3. Lock colors, type, spacing, image treatment, and contrast rhythm in `00_plan/deck-style-tokens.md`.\n"
-            "4. Extract verified facts into `00_plan/fact-registry.md`, then build `00_plan/slide-source-map.md` and `00_plan/layout-registry.md`.\n"
-            "5. Complete the content grouping and layout analysis in one slide blueprint per page.\n"
-            "6. For every content page, generate one bespoke whole-slide background template image only after its blueprint is complete; then add editable text and real evidence.\n"
-            "7. Render the PPT, complete `03_renders/rendered-visual-critique.md`, fix open major issues, and re-render.\n"
-            "8. Approve a representative template slide before bulk production when the visual direction is not already approved.\n",
+            "4. Extract verified facts into `00_plan/fact-registry.md`, then build `00_plan/slide-source-map.md`, `00_plan/data-evidence-plan.md` when needed, and `00_plan/layout-registry.md`.\n"
+            "5. Complete `00_plan/speaker-map.md` so visible evidence, spoken explanation, timing, and likely questions remain separate.\n"
+            "6. Complete the content grouping, page rhythm, and layout analysis in one slide blueprint per page.\n"
+            "7. For every content page, generate one bespoke whole-slide background template image only after its blueprint is complete; then add editable text and real evidence.\n"
+            "8. Render the PPT, complete `03_renders/rendered-visual-critique.md`, fix open major issues, and re-render.\n"
+            "9. Approve a representative template slide before bulk production when the visual direction is not already approved.\n",
             encoding="utf-8",
         )
 
