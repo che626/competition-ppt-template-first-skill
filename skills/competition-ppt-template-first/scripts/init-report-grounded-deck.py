@@ -81,8 +81,9 @@ def main() -> None:
             "1. Fill `00_intake/source-manifest.md`.\n"
             "2. Split the material into a deck decision in `00_plan/content-analysis.md`.\n"
             "3. Extract verified facts into `00_plan/fact-registry.md`.\n"
-            "4. Build `00_plan/slide-source-map.md` and template contracts before any template image.\n"
-            "5. Create one slide blueprint per page, then approve a representative template slide.\n",
+            "4. Build `00_plan/slide-source-map.md`, then complete the content grouping and layout analysis in one slide blueprint per page.\n"
+            "5. For every content page, generate one bespoke whole-slide background template image only after its blueprint is complete; then add editable text and real evidence.\n"
+            "6. Approve a representative template slide before bulk production when the visual direction is not already approved.\n",
             encoding="utf-8",
         )
 

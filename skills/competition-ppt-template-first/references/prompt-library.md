@@ -7,7 +7,7 @@ These prompts are starting structures, not fixed styles. Replace bracketed field
 Append this to every template-image prompt:
 
 ```text
-16:9 presentation template with a subject-specific background scene or purpose-designed quiet surface, a clear primary visual anchor, and supporting visual ingredients that belong to the topic. Leave deliberate low-detail zones for editable Chinese text and real evidence images. Use the light / mid / dark contrast mode defined in the page contract, not a default dark navy treatment. Integrated composition rather than a collage of empty cards. No readable text, fake dashboard screenshot, watermark, generic dark-AI HUD wireframe, repeated rounded-card wall, oversized decorative sphere, or empty placeholder frames.
+This is the complete bottom-layer background image for one specific 16:9 presentation slide. Respect the exact title, main-claim, detail, conclusion, and real-asset zones recorded in the page contract; keep those zones low-detail and compositionally intentional for later editable Chinese text and authentic evidence images. Use a subject-specific background scene or purpose-designed quiet surface, a clear primary visual anchor, and supporting visual ingredients that belong to the topic. Use the light / mid / dark contrast mode defined in the page contract, not a default dark navy treatment. Integrated composition rather than a collage of empty cards. No readable text, fake dashboard screenshot, watermark, generic dark-AI HUD wireframe, repeated rounded-card wall, oversized decorative sphere, or empty placeholder frames.
 ```
 
 ## Cover
@@ -38,6 +38,18 @@ Product-showcase page for [product] in [real user or operating scenario]. Make t
 
 ```text
 Technical decision page for a verified model-selection decision in [domain]. Reserve a quiet, high-contrast decision matrix zone for editable comparison facts, a real-result evidence zone, and a small deployment-chain zone. Choose the page contrast from the content density; dark is optional, not automatic. Use [domain-specific visual motif] rather than a generic data screen.
+```
+
+## Quiet technical evidence template
+
+```text
+Quiet evidence-led page for [technical topic]. Keep [title zone] and [main claim zone] clean; reserve [exact number] editable explanation zones with the specified word budgets, [exact real asset slots and aspect ratios], and [conclusion zone]. Use [subject-specific material / device / process detail] as a restrained background anchor with low visual noise behind the factual zones. This must remain a complete whole-slide background image, not a flat canvas for native cards.
+```
+
+## Screenshot-led template
+
+```text
+Screenshot-led page for [system or workflow]. Compose around the supplied real screenshots: reserve [slot 1 placement, aspect ratio, crop focus], [slot 2 placement, aspect ratio, crop focus], and [slot 3 placement, aspect ratio, crop focus]. Integrate [real-world operating scene / material / hardware detail] at low intensity so it supports the screenshots without impersonating a UI. Leave [title, explanation, conclusion] zones clean and large enough for editable Chinese copy. Do not generate any synthetic interface.
 ```
 
 ## Iteration

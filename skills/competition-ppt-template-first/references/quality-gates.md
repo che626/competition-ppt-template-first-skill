@@ -31,11 +31,14 @@ Perform these checks on exported slide images, not just in the PowerPoint editor
 
 ## Template-first integrity
 
+- Every content slide has an associated bespoke generated or art-directed whole-slide background template file; quiet technical pages are not exceptions.
 - The visual underlay was designed for this page's content zones.
 - The page blueprint includes a completed template contract before the template was generated.
+- The template was generated after the layout analysis documented its text zones, real-asset slots, aspect ratios, and crop focus.
 - New objects are not merely covering defects in an old background.
 - Editable text and evidence align to intentional zones in the template.
 - The template has no fake readable text or fake product screenshots.
+- No content slide consists only of native shapes or cards on a flat/default background.
 
 ## Approval gate
 

@@ -11,7 +11,7 @@
 
 Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 
-`competition-ppt-template-first` is a reusable Agent Skill for competition, product, and technical PPTs. It replaces the usual "dark background + generic components + tiny text" workflow with a content-to-template sequence: analyze the material, choose the story, define the background and visual ingredients for every page, then build the editable deck.
+`competition-ppt-template-first` is a reusable Agent Skill for competition, product, and technical PPTs. It replaces the usual "dark background + generic components + tiny text" workflow with a content-to-template sequence: analyze the material, choose the story, define each page's layout and visual ingredients, generate a bespoke whole-slide background template for that exact page, then build the editable deck.
 
 ```mermaid
 flowchart LR
@@ -24,7 +24,7 @@ flowchart LR
     G --> H[Approved files]
 ```
 
-The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Every page is planned first: its background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. A full-page template is most valuable for cover, concept, pain-point, solution, award, and conclusion pages; dense technical pages can use a quieter but still purpose-designed layout instead.
+The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Every page is planned first: content grouping, background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. Then every content page receives a bespoke whole-slide template image generated from that plan. Dense technical pages still receive a quieter generated template, not a flat or card-only exception. Cover and closing pages use separate hero/conclusion template rules.
 
 ## Two Practical Levels
 

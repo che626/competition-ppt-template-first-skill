@@ -51,9 +51,9 @@ Fill `templates/content-analysis.md`. It must contain:
 
 Show this analysis to the user before bulk template generation when the deck is important, the source is ambiguous, or the visual direction is not already approved. If the user asks for direct production and the material is clear, save the analysis in the project folder and continue.
 
-## 4. Design a template contract for every page
+## 4. Analyze the layout, then design a template contract for every page
 
-Before generating a page image, write a template contract inside the page blueprint. It must specify all of the following:
+Before generating a page image, finish the slide's content plan and layout analysis inside the page blueprint. Then write a template contract. The image-generation prompt must encode the completed contract; it must never be generated before the layout is decided. It must specify all of the following:
 
 | Field | Required decision |
 | --- | --- |
@@ -68,6 +68,8 @@ Before generating a page image, write a template contract inside the page bluepr
 | Avoid list | What would make this page generic, cramped, or off-topic. |
 
 A valid template image has a visible subject and a planned composition. It is not a stock photo darkened behind three rectangles, a line-art wireframe, or a single repeated card layout.
+
+Every content page needs one bespoke whole-slide template image derived from this contract. Technical, comparison, and screenshot pages use a quieter template image, not a native-layout exception. Cover and closing pages use their own hero/conclusion template contract rather than the dense content-page pattern.
 
 ## 5. Choose style from the subject, not from the word "AI"
 
@@ -108,4 +110,5 @@ Before building an editable PPT page, inspect the template against its contract.
 - Does the composition have enough visual ingredients without turning into decorative clutter?
 - Is this page structurally different from adjacent pages while still in the same visual family?
 - Does the palette serve the content rather than repeating a default dark-AI style?
-
+- Was this background template generated only after the page's content zones, real-asset slots, and layout were recorded?
+- Can every real screenshot and editable text block sit in its planned zone without adding a new card wall over the template?

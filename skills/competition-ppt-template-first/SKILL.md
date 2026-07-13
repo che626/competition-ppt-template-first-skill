@@ -1,6 +1,6 @@
 ---
 name: competition-ppt-template-first
-description: "Create polished competition, product, and technical PPTs through a content-to-template workflow: analyze supplied documents and user goals, choose the story and visual system, define a subject-specific visual template for every page, then build an editable PPT with real evidence and rendered QA. Use when a deck must look intentionally designed rather than like generic dark-AI cards."
+description: "Create polished competition, product, and technical PPTs through a content-to-template workflow: analyze supplied documents and user goals, map each slide's layout and asset zones, generate a subject-specific whole-slide background template for every page, then build an editable PPT with real evidence and rendered QA. Use when a deck must look intentionally designed rather than like generic dark-AI cards."
 ---
 
 # Competition PPT: Template-First Workflow
@@ -18,7 +18,7 @@ Instead:
 1. Split the supplied report, requirements, screenshots, data, and user requests into a content-to-deck analysis.
 2. Decide what kind of deck it is, who must be convinced, what the story route is, and what must visibly appear on every page.
 3. Build a slide map and a template contract for every page before drawing anything.
-4. Generate or art-direct a **whole-slide visual template** for each page that needs a background or scene. The template must include the required visual anchor, real-asset zones, text zones, and subject-specific visual ingredients.
+4. After that page's contract is complete, generate or art-direct one **whole-slide visual template image for every page**. The template must include the required visual anchor, real-asset zones, text zones, and subject-specific visual ingredients.
 5. Turn the approved templates into a layered PPT: background, real images, editable text, and only the overlays that need to remain editable.
 6. Render and inspect the finished deck, or at least the key pages changed in the current pass.
 
@@ -48,6 +48,8 @@ State the selected mode and the expected user approval point before producing a 
 - Important content slides should have one primary claim. The title, evidence, and conclusion should support it.
 - Use a credible visual anchor on key content slides when evidence is available: a real screenshot, authentic sample image, measured chart, physical scene, or verified artifact.
 - A generated image is a visual template, not a substitute for evidence. Do not use synthetic screenshots in place of real product evidence.
+- Every content slide must use a bespoke generated or art-directed whole-slide template image as its bottom layer. A quiet technical template is still an image-generation deliverable, not permission to fall back to a flat background or a native card layout.
+- Generate the page template only after its page blueprint states the exact content blocks, image slots, crop focus, text zones, and supporting visual ingredients. Do not invent a visual template first and try to force content into it later.
 - A visual template must show the page's actual subject, visual anchor, text zones, and evidence zones. A darkened stock photo with a row of generic boxes is not a valid template.
 - Do not default to black, navy, cyan glow, HUD lines, English micro-labels, or a cyber style because the project mentions AI. Choose color, material, light, and scene from the subject and use light, mid, and dark pages deliberately.
 - Use richer, brighter visual templates on low-text pages. Use quieter, darker templates behind dense text or real screenshots.
@@ -111,7 +113,9 @@ The deck should feel like one family, not the same layout repeated eleven times.
 
 ### 4. Generate the template image from the page contract
 
-Each page must have a template contract. Generate a 16:9 template image for pages whose visual underlay matters, such as cover, pain-point, concept, solution, milestone, award, and conclusion pages. For dense technical, comparison, or screenshot pages, use a quieter but still purpose-designed template or a carefully designed native layout when that produces a clearer result. A template prompt must specify:
+Each page must have a template contract before image generation. Generate or art-direct one bespoke 16:9 whole-slide template image for every page. Content pages use the full content-to-template route: layout analysis first, template image second, editable evidence and text last. Cover and closing pages use an independently composed hero or conclusion template rather than a dense content layout, but still have their own whole-slide visual background.
+
+Dense technical, comparison, iteration, and screenshot pages must use a quieter generated template with intentionally reserved text and real-asset zones. Minimal editable captions, crop masks, highlights, or data callouts may sit above it, but native shapes may not replace the whole-slide template image. A template prompt must specify:
 
 - Subject matter and visual metaphor.
 - Background scene or surface, including why it belongs to the subject.
@@ -121,6 +125,13 @@ Each page must have a template contract. Generate a 16:9 template image for page
 - The required density and visual weight.
 - The light/mid/dark mode, palette, material, and visual system selected in Step 3.
 - `No readable text, no fake dashboard screenshots, no watermark.`
+
+Treat the following as the image-generation execution contract:
+
+1. Derive the prompt from the completed slide blueprint, including exact title zone, main-claim zone, each text block, real-image slot, aspect ratio, crop focus, primary visual, blank zones, palette, contrast, and avoid list.
+2. Use the available image-generation capability to generate the template. Use an art-directed source image only when image generation is unavailable or the source can satisfy the same documented composition contract better.
+3. Inspect it at 16:9 presentation size before placing any content. Reject it when reserved zones are missing, crowded, visually unrelated, or unable to support the specified crop and word budget.
+4. Regenerate the entire bottom template when the composition is wrong. Do not conceal a poor template with extra card walls or new frames.
 
 The template image may include integrated light, surfaces, device imagery, product details, material texture, people in context, camera optics, data atmosphere, illustration, or evidence-wall treatment. It should not look like a wireframe that was assembled from empty boxes, a dark stock image behind generic cards, or a repeated cyber-HUD layout.
 
@@ -171,6 +182,7 @@ A page is ready to deliver when:
 
 - It communicates one judge-relevant conclusion.
 - Its content role, visual anchor, real-asset slots, text zones, and background scene were planned in a page/template contract before production.
+- Its whole-slide background template image was generated or art-directed from that contract after the layout analysis, including for quiet technical pages.
 - Important factual claims are grounded in source material and traceable through a fact ID and source locator when appropriate.
 - It uses a credible visual anchor when the page needs evidence and the material is available.
 - All important text is readable, aligned, and inside its intended region.

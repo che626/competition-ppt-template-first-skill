@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0 - 2026-07-13
+
+- Made the per-page image-template flow mandatory: analyze the exact slide layout first, generate one bespoke whole-slide background template image from that plan, then place editable text and real evidence.
+- Removed the native-layout exception for dense technical, comparison, iteration, and screenshot pages; these now require quieter generated templates with documented evidence and text zones.
+- Added a template image execution contract, acceptance record, and rendered QA checks for layout-derived background templates.
+- Clarified the cover and closing as separately composed hero/conclusion pages, while retaining their own whole-slide visual backgrounds.
+
 ## 0.5.0 - 2026-07-13
 
 - Added a mandatory content-to-template analysis before page production: deck type, audience decision, narrative route, visual-ingredient inventory, gaps, questions, and style rationale.

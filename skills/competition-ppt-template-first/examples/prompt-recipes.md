@@ -11,7 +11,7 @@ Before creating the deck, write a content-to-deck analysis: deck type, audience 
 visual-ingredient inventory, missing materials, and style rationale. Then write a deck brief, fact registry,
 and a page-by-page template contract: background scene, primary visual, real-image slots, text zones,
 supporting visual ingredients, contrast mode, and avoid list.
-Then generate one dense representative signature-slide template for approval.
+Then generate one dense representative signature-slide template for approval. For every later content slide, complete its layout contract first and generate a dedicated whole-slide background template before placing editable content.
 Do not start bulk slide production until the signature slide is approved.
 ```
 

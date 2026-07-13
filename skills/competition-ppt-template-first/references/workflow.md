@@ -95,7 +95,9 @@ Vary these between pages:
 
 ## 6. Design the whole slide before editing text
 
-Generate or art-direct a 16:9 template from the page contract. Include the actual subject matter in the visual, not only abstract decoration. A valid template has a background scene or purpose-designed surface, one primary visual, supporting visual ingredients, exact real-asset slots, text zones, and a clear contrast decision.
+Generate or art-direct a bespoke 16:9 whole-slide template image from the completed page contract. Do this for every content page, including technical comparisons, iterations, and system screenshots. Those pages may use a quieter composition, but they may not skip template-image generation in favor of a flat background or a native card layout. Cover and closing pages use separately composed hero/conclusion templates instead of dense content layouts.
+
+Include the actual subject matter in the visual, not only abstract decoration. A valid template has a background scene or purpose-designed surface, one primary visual, supporting visual ingredients, exact real-asset slots, text zones, and a clear contrast decision.
 
 ### Template prompt structure
 
@@ -108,7 +110,7 @@ Supporting visual ingredients: [relevant detail crop / object / artifact / mater
 Composition: [title zone, exact real-asset slots and aspect ratios, body-copy zones, conclusion zone].
 Style: [light / mid / dark mode, palette, material, lighting, texture] with a reason tied to the subject.
 Density: [high / medium] with hierarchy and room for editable Chinese text.
-No readable text, fake UI screenshots, watermark, generic dark-AI HUD lines, repeated rounded-card wall, decorative sphere, or empty frames.
+This is the complete bottom-layer background image for this one specific slide. Respect every listed zone as a low-detail composition area. No readable text, fake UI screenshots, watermark, generic dark-AI HUD lines, repeated rounded-card wall, decorative sphere, or empty frames.
 ```
 
 The visual template has two jobs: create a finished visual world and reserve space for reality. It does not need to contain the final copy.
@@ -123,6 +125,8 @@ Inspect the template at presentation size. Reject it if:
 - It looks like a cover when it needs to carry dense evidence.
 - It is too similar to the immediately previous page.
 - Its palette was selected only because the topic includes AI.
+- It does not visibly reserve the exact zones named in the page blueprint.
+- It was generated before the page layout and content plan were decided.
 
 ## 8. Build a layered PPT
 
@@ -136,6 +140,8 @@ Recommended layer model:
 | Minimal overlays | Crop masks, captions, progress arrows, highlight markers | Yes when useful |
 
 This is intentionally hybrid. A high-end page may use a single background image, yet still be a real PPT because its story, evidence, and key text are editable.
+
+Do not replace the template image with a collection of native cards. Native elements are only small, editable overlays needed to add real evidence, factual text, crop masks, highlights, or future replacement points.
 
 ## 9. Revise structurally
 
