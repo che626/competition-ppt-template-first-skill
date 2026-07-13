@@ -21,9 +21,16 @@ REQUIRED_FILES = (
     "references/prompt-library.md",
     "references/project-conventions.md",
     "references/quality-gates.md",
+    "references/deck-token-system.md",
+    "references/image-asset-roles.md",
+    "references/rendered-visual-critique.md",
     "templates/deck-brief.md",
+    "templates/deck-style-tokens.md",
     "templates/content-analysis.md",
     "templates/fact-registry.md",
+    "templates/image-asset-register.md",
+    "templates/layout-registry.md",
+    "templates/rendered-visual-critique.md",
     "templates/slide-blueprint.md",
     "templates/slide-source-map.md",
     "templates/source-manifest.md",
@@ -33,6 +40,30 @@ REQUIRED_FILES = (
 )
 
 MARKDOWN_LINK = re.compile(r"\]\(([^)#]+)(?:#[^)]+)?\)")
+
+WORKFLOW_CONTRACT = {
+    "SKILL.md": (
+        "deck-style-tokens.md",
+        "image-asset-register.md",
+        "layout-registry.md",
+        "rendered-visual-critique.md",
+    ),
+    "references/quality-gates.md": (
+        "Deck-control integrity",
+        "Rendered visual critique",
+        "No layout family appears more than twice consecutively",
+    ),
+    "templates/slide-blueprint.md": (
+        "Deck controls used on this page",
+        "Entry point and eye flow",
+    ),
+    "scripts/init-report-grounded-deck.py": (
+        "deck-style-tokens.md",
+        "image-asset-register.md",
+        "layout-registry.md",
+        "rendered-visual-critique.md",
+    ),
+}
 
 
 def fail(message: str) -> None:
@@ -75,6 +106,14 @@ def validate_markdown_links(search_root: Path) -> None:
         fail("broken local Markdown links:\n  " + "\n  ".join(broken))
 
 
+def validate_workflow_contract() -> None:
+    for relative_path, required_phrases in WORKFLOW_CONTRACT.items():
+        content = (PACKAGE_ROOT / relative_path).read_text(encoding="utf-8")
+        for phrase in required_phrases:
+            if phrase not in content:
+                fail(f"workflow contract missing {phrase!r} in {relative_path}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Validate the installable competition-PPT Skill package."
@@ -90,6 +129,7 @@ def main() -> None:
     validate_front_matter()
     validate_required_files()
     validate_markdown_links(search_root)
+    validate_workflow_contract()
     print("PACKAGE_STATIC_VALIDATION=OK")
 
 
