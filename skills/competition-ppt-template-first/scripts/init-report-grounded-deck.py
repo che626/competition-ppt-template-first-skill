@@ -11,7 +11,11 @@ from pathlib import Path
 TEMPLATE_NAMES = (
     "content-analysis.md",
     "deck-brief.md",
+    "deck-style-tokens.md",
     "fact-registry.md",
+    "image-asset-register.md",
+    "layout-registry.md",
+    "rendered-visual-critique.md",
     "source-manifest.md",
     "slide-source-map.md",
     "slide-blueprint.md",
@@ -53,7 +57,11 @@ def main() -> None:
     destinations = {
         "content-analysis.md": directories["00_plan"] / "content-analysis.md",
         "deck-brief.md": directories["00_plan"] / "deck-brief.md",
+        "deck-style-tokens.md": directories["00_plan"] / "deck-style-tokens.md",
         "fact-registry.md": directories["00_plan"] / "fact-registry.md",
+        "image-asset-register.md": directories["00_intake"] / "image-asset-register.md",
+        "layout-registry.md": directories["00_plan"] / "layout-registry.md",
+        "rendered-visual-critique.md": directories["03_renders"] / "rendered-visual-critique.md",
         "source-manifest.md": directories["00_intake"] / "source-manifest.md",
         "slide-source-map.md": directories["00_plan"] / "slide-source-map.md",
         "slide-blueprint.md": directories["00_plan"] / "slide-blueprint.md",
@@ -79,11 +87,13 @@ def main() -> None:
             "# Report-Grounded Competition PPT Workspace\n\n"
             f"Source folder: `{source_note}`\n\n"
             "1. Fill `00_intake/source-manifest.md`.\n"
-            "2. Split the material into a deck decision in `00_plan/content-analysis.md`.\n"
-            "3. Extract verified facts into `00_plan/fact-registry.md`.\n"
-            "4. Build `00_plan/slide-source-map.md`, then complete the content grouping and layout analysis in one slide blueprint per page.\n"
-            "5. For every content page, generate one bespoke whole-slide background template image only after its blueprint is complete; then add editable text and real evidence.\n"
-            "6. Approve a representative template slide before bulk production when the visual direction is not already approved.\n",
+            "2. Split the material into a deck decision in `00_plan/content-analysis.md` and register images in `00_intake/image-asset-register.md`.\n"
+            "3. Lock colors, type, spacing, image treatment, and contrast rhythm in `00_plan/deck-style-tokens.md`.\n"
+            "4. Extract verified facts into `00_plan/fact-registry.md`, then build `00_plan/slide-source-map.md` and `00_plan/layout-registry.md`.\n"
+            "5. Complete the content grouping and layout analysis in one slide blueprint per page.\n"
+            "6. For every content page, generate one bespoke whole-slide background template image only after its blueprint is complete; then add editable text and real evidence.\n"
+            "7. Render the PPT, complete `03_renders/rendered-visual-critique.md`, fix open major issues, and re-render.\n"
+            "8. Approve a representative template slide before bulk production when the visual direction is not already approved.\n",
             encoding="utf-8",
         )
 
