@@ -29,6 +29,14 @@ Perform these checks on exported slide images, not just in the PowerPoint editor
 - The background scene, product, material, device, person, sample, or evidence treatment visibly belongs to the page subject.
 - The deck does not default to the same black/navy/cyan "AI" treatment on every page unless that direction was explicitly approved.
 
+## Deck-control integrity
+
+- `deck-style-tokens.md` defines the current color, type, spacing, image-treatment, and contrast-rhythm rules before page production.
+- Every page names the token version and does not introduce arbitrary one-off colors, font sizes, or frame styles without a recorded exception.
+- `image-asset-register.md` gives every image a role; real evidence and screenshots retain their truth status and recognizable region.
+- `layout-registry.md` records each page's reading order and primary visual anchor.
+- No layout family appears more than twice consecutively unless the deck explicitly records and justifies the exception.
+
 ## Template-first integrity
 
 - Every content slide has an associated bespoke generated or art-directed whole-slide background template file; quiet technical pages are not exceptions.
@@ -39,6 +47,13 @@ Perform these checks on exported slide images, not just in the PowerPoint editor
 - Editable text and evidence align to intentional zones in the template.
 - The template has no fake readable text or fake product screenshots.
 - No content slide consists only of native shapes or cards on a flat/default background.
+
+## Rendered visual critique
+
+- Complete `rendered-visual-critique.md` after export for high-risk slides and every page changed in the current pass.
+- Rate composition, hierarchy, information density, and typography as `pass`, `minor`, or `major`; record an observation, problem, and specific fix for every non-pass result.
+- Fix every open `major` issue, re-render the affected slide, and record the verification evidence.
+- Do not use "looks good" as a visual QA result without the four review dimensions.
 
 ## Approval gate
 
