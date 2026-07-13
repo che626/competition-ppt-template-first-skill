@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.0 - 2026-07-14
+
+- Added deck style tokens for color, typography, spacing, image treatment, and contrast rhythm; pages may no longer introduce arbitrary visual values without a recorded exception.
+- Added a truth-aware image asset register that distinguishes style references, template sources, real evidence, replaceable screenshots, and decorative cutouts.
+- Added a layout registry that records each page's layout family, reading order, entry point, evidence slot, word budget, and structural relation to adjacent pages.
+- Added a rendered visual critique that rates composition, hierarchy, information density, and typography; open major issues require a fix and a re-render.
+- Updated workspace initialization, documentation, package validation, and quality gates so the four controls are generated and verified in every report-grounded deck.
+
 ## 0.6.0 - 2026-07-13
 
 - Made the per-page image-template flow mandatory: analyze the exact slide layout first, generate one bespoke whole-slide background template image from that plan, then place editable text and real evidence.

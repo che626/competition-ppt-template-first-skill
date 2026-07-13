@@ -32,9 +32,11 @@ Complete this after reading the supplied material and before generating page tem
 
 ### Real visual assets
 
-| ID | File / source | What it shows | Recommended page / crop | Must remain recognizable? |
-| --- | --- | --- | --- | --- |
-| E-01 |  |  |  | Yes / No |
+| ID | File / source | Asset role | What it shows | Recommended page / crop | Must remain recognizable? |
+| --- | --- | --- | --- | --- | --- |
+| E-01 |  | real-evidence / replaceable-screenshot / style-reference / template-underlay-source / decorative-cutout |  |  | Yes / No |
+
+- Complete `image-asset-register.md` before producing template images.
 
 ### Missing or changeable material
 
@@ -57,6 +59,8 @@ Complete this after reading the supplied material and before generating page tem
 - Accent logic:
 - Light / mid / dark page distribution:
 - Typography and title behavior:
+- Deck style token version:
+- Shared spacing and image-treatment rules:
 - Pages that need a rich scene:
 - Pages that need a quiet evidence background:
 - Forbidden default patterns:

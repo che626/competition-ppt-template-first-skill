@@ -16,15 +16,15 @@ Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 ```mermaid
 flowchart LR
     A[Report, brief,<br/>screenshots and assets] --> B[Content analysis<br/>and visual inventory]
-    B --> C[Story route<br/>and page roles]
-    C --> D[Per-page template contract<br/>background, visuals, zones]
+    B --> C[Story route, asset roles,<br/>and deck style tokens]
+    C --> D[Layout registry and per-page<br/>template contracts]
     D --> E[Template images<br/>and composition review]
     E --> F[Editable PPT<br/>with real evidence]
-    F --> G[Render and<br/>readability check]
+    F --> G[Rendered visual critique<br/>and fix verification]
     G --> H[Approved files]
 ```
 
-The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Every page is planned first: content grouping, background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. Then every content page receives a bespoke whole-slide template image generated from that plan. Dense technical pages still receive a quieter generated template, not a flat or card-only exception. Cover and closing pages use separate hero/conclusion template rules.
+The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Before page production, the Skill locks a deck token system, assigns every image a truth-aware role, and registers the layout rhythm across the deck. Every page is planned first: content grouping, background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. Then every content page receives a bespoke whole-slide template image generated from that plan. Dense technical pages still receive a quieter generated template, not a flat or card-only exception. Cover and closing pages use separate hero/conclusion template rules.
 
 ## Two Practical Levels
 
@@ -110,11 +110,11 @@ python skills/competition-ppt-template-first/scripts/init-report-grounded-deck.p
 
 ```text
 competition-ppt/
-  00_intake/     source manifest, extraction notes, original-asset references
-  00_plan/       content analysis, fact registry, deck brief, slide-source map, page blueprints
+  00_intake/     source manifest, extraction notes, image asset roles, original-asset references
+  00_plan/       content analysis, fact registry, deck brief, style tokens, layout registry, slide-source map, page blueprints
   01_templates/  approved 16:9 template images and prompt records
   02_build/      editable PPTX work files
-  03_renders/    exported previews and QA notes
+  03_renders/    exported previews, rendered visual critique, and QA notes
   04_approved/   explicitly confirmed pages
   99_retired/    rejected variants kept for traceability
 ```
@@ -132,7 +132,14 @@ The full folder convention is documented in [`project-conventions.md`](skills/co
 | [`layout-archetypes.md`](skills/competition-ppt-template-first/references/layout-archetypes.md) | Competition-specific page structures |
 | [`prompt-library.md`](skills/competition-ppt-template-first/references/prompt-library.md) | Prompt patterns for visual templates |
 | [`quality-gates.md`](skills/competition-ppt-template-first/references/quality-gates.md) | Rendered PPT acceptance checks |
+| [`deck-token-system.md`](skills/competition-ppt-template-first/references/deck-token-system.md) | Deck-level color, type, spacing, image, and contrast controls |
+| [`image-asset-roles.md`](skills/competition-ppt-template-first/references/image-asset-roles.md) | Truth-aware image roles and screenshot framing rules |
+| [`rendered-visual-critique.md`](skills/competition-ppt-template-first/references/rendered-visual-critique.md) | Composition, hierarchy, density, and typography critique method |
 | [`deck-brief.md`](skills/competition-ppt-template-first/templates/deck-brief.md) | Deck-level planning template |
+| [`deck-style-tokens.md`](skills/competition-ppt-template-first/templates/deck-style-tokens.md) | Deck token control sheet |
+| [`image-asset-register.md`](skills/competition-ppt-template-first/templates/image-asset-register.md) | Image truth role and transformation register |
+| [`layout-registry.md`](skills/competition-ppt-template-first/templates/layout-registry.md) | Page rhythm and layout-family registry |
+| [`rendered-visual-critique.md`](skills/competition-ppt-template-first/templates/rendered-visual-critique.md) | Render-review record and fix-verification log |
 | [`content-analysis.md`](skills/competition-ppt-template-first/templates/content-analysis.md) | Required analysis of deck type, audience decision, visual ingredients, style rationale, and gaps |
 | [`source-manifest.md`](skills/competition-ppt-template-first/templates/source-manifest.md) | Inventory of reports, requirements, data, and assets |
 | [`slide-source-map.md`](skills/competition-ppt-template-first/templates/slide-source-map.md) | Page-by-page mapping from source facts to judge conclusions |

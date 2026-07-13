@@ -52,6 +52,14 @@ Complete this before creating slide blueprints or template images.
 - Slides that should be visually rich:
 - Slides that should be quiet and evidence-led:
 
+## Deck token control
+
+- Deck style token version:
+- Color, type, spacing, and image-treatment source of truth: `deck-style-tokens.md`
+- Image asset register completed: [yes / no]
+- Maximum consecutive uses of one layout family: 2
+- Planned visual rhythm and structural breaks:
+
 ## Non-negotiable constraints
 
 - Verified facts only:

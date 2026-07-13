@@ -15,7 +15,12 @@ Copy this file once per slide before generating a template image.
 - [Fact / metric / statement] - source: [document or artifact]
 
 ### Real evidence available
-- [Screenshot / chart / photo / document / certificate]
+- [Asset ID, role, screenshot / chart / photo / document / certificate]
+
+### Deck controls used on this page
+- Deck style token version:
+- Image asset IDs and roles:
+- Layout-registry row / layout family:
 
 ### Content plan
 - Title: [maximum 16 Chinese characters preferred]
@@ -26,6 +31,7 @@ Copy this file once per slide before generating a template image.
 
 ### Layout analysis before generation
 - Content grouping and reading order: [what the audience sees first, second, third]
+- Entry point and eye flow: [first visual capture, then deliberate reading path]
 - Visual balance: [left / center / right, top / middle / bottom, relative visual weights]
 - Planned real-asset slots: [asset ID, exact placement, aspect ratio, crop focus]
 - Planned editable text zones: [title, main claim, detail blocks, conclusion; position, maximum word count, relative size]
