@@ -9,12 +9,14 @@ The required route is:
 ```text
 project documents and assets
   -> source manifest
+  -> image-asset roles and deck style tokens
   -> content analysis: deck type, audience, story, visual ingredients, gaps
   -> extracted facts and evidence IDs
   -> audience-facing narrative route
-  -> slide-source map
+  -> slide-source map and layout registry
   -> page blueprints plus template contracts
   -> visual templates and editable PPT
+  -> rendered visual critique and fix-verification
 ```
 
 This route prevents two common failures:
@@ -72,6 +74,10 @@ Use `templates/slide-blueprint.md`. A blueprint must answer:
 - Is the template light, mid, or dark, and why?
 - What must the template avoid?
 
+Before the first page template, complete `templates/deck-style-tokens.md` and `templates/image-asset-register.md`. For every planned slide, add a row to `templates/layout-registry.md`: page role, layout family, reading order, primary visual anchor, asset slot, word budget, contrast mode, and structural relation to the previous page.
+
+Do not repeat the same layout family more than twice in a row. The deck may vary its composition, but not its token system without a documented reason.
+
 ## 5. Select a visual system
 
 Choose a system that belongs to the subject matter. For example, an AI-vision manufacturing project can mix real material, camera optics, process light, and restrained diagnostic cues; it does not need every page to be dark blue. A medical project might use clinical imaging and soft translucent layers; a product showcase may use the product's own colors and user context.
@@ -127,6 +133,7 @@ Inspect the template at presentation size. Reject it if:
 - Its palette was selected only because the topic includes AI.
 - It does not visibly reserve the exact zones named in the page blueprint.
 - It was generated before the page layout and content plan were decided.
+- It ignores the deck tokens, asset roles, or layout-registry entry for the page.
 
 ## 8. Build a layered PPT
 
@@ -152,7 +159,18 @@ Treat feedback as a structural signal:
 - If the page feels generic, change the scene, visual anchor, and composition.
 - If the background is wrong, replace the full background template. Do not stack new frames over old ones.
 
-## 10. Archive decisions
+## 10. Run the rendered visual critique
+
+After rendering, use `references/rendered-visual-critique.md` and record the result in `templates/rendered-visual-critique.md`. For each changed or high-risk slide, inspect:
+
+1. Composition: balance, whitespace, rhythm, and grouping.
+2. Visual hierarchy: entry point, eye flow, weight, and emphasis.
+3. Information density: cognitive load, content priority, and scanning order.
+4. Typography: token use, scale, contrast, wrapping, and evidence-caption attachment.
+
+Record `pass`, `minor`, or `major` with an observation, a problem, and a specific fix. Re-render after any major fix. Do not approve a deck that still has an open major issue.
+
+## 11. Archive decisions
 
 Maintain three folders or labels:
 
