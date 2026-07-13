@@ -6,13 +6,21 @@ Complete this before creating slide blueprints or template images.
 ## Project
 
 - Project name:
+- Deck type: [competition defense / product showcase / technical review / research briefing / project update]
 - Competition / track:
 - Audience and judging focus:
 - Target page count and presentation duration:
+- User's requested outcome and visual references:
 
 ## One-sentence judge takeaway
 
 [After the defense, the judges should believe that...]
+
+## Audience decision and story route
+
+- Audience should decide / remember:
+- Primary narrative route:
+- What must not become the main story:
 
 ## Source of truth
 
@@ -33,12 +41,14 @@ Complete this before creating slide blueprints or template images.
 
 ## Visual system
 
-- Dominant tone:
+- Dominant tone and reason:
 - Support tone:
 - Accent logic:
 - Subject-specific motif:
+- Visual ingredients available: [product / device / material / person / environment / sample / chart / document]
 - Title behavior:
 - Typography direction:
+- Light / mid / dark page distribution:
 - Slides that should be visually rich:
 - Slides that should be quiet and evidence-led:
 
@@ -49,10 +59,10 @@ Complete this before creating slide blueprints or template images.
 - Language:
 - Forbidden visual patterns:
 - Editable-content requirements:
+- Questions to ask or assumptions to record:
 
 ## Approval gate
 
 - Signature slide selected:
 - What must be approved before batch production:
 ```
-

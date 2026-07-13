@@ -14,6 +14,7 @@ PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = (
     "SKILL.md",
     "agents/openai.yaml",
+    "references/content-to-template-analysis.md",
     "references/workflow.md",
     "references/source-ingestion.md",
     "references/layout-archetypes.md",
@@ -21,6 +22,7 @@ REQUIRED_FILES = (
     "references/project-conventions.md",
     "references/quality-gates.md",
     "templates/deck-brief.md",
+    "templates/content-analysis.md",
     "templates/fact-registry.md",
     "templates/slide-blueprint.md",
     "templates/slide-source-map.md",

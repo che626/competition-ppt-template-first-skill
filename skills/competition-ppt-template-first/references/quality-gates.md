@@ -25,10 +25,14 @@ Perform these checks on exported slide images, not just in the PowerPoint editor
 - The page does not repeat the exact layout of its neighbors.
 - Decoration supports the subject rather than filling empty space.
 - At least 0.3 inch of visual breathing room separates unrelated content groups.
+- The page is not merely a dark stock image with evenly spaced translucent boxes.
+- The background scene, product, material, device, person, sample, or evidence treatment visibly belongs to the page subject.
+- The deck does not default to the same black/navy/cyan "AI" treatment on every page unless that direction was explicitly approved.
 
 ## Template-first integrity
 
 - The visual underlay was designed for this page's content zones.
+- The page blueprint includes a completed template contract before the template was generated.
 - New objects are not merely covering defects in an old background.
 - Editable text and evidence align to intentional zones in the template.
 - The template has no fake readable text or fake product screenshots.

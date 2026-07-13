@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 - 2026-07-13
+
+- Added a mandatory content-to-template analysis before page production: deck type, audience decision, narrative route, visual-ingredient inventory, gaps, questions, and style rationale.
+- Added a per-page template contract covering the background scene, primary visual, supporting visual ingredients, real-asset slots, text zones, contrast mode, and avoid list.
+- Added product-showcase routing so product, prototype, and real interface states become the visual anchor instead of a generic feature catalogue.
+- Removed the implicit dark-blue/cyan AI default. Templates must derive their palette, scene, material, and light/dark distribution from the subject and page role.
+- Added content analysis to report-grounded workspace initialization, public documentation, prompt recipes, visual prompts, and rendered QA.
+
 ## 0.4.3 - 2026-07-13
 
 - Reframed the public workflow as a practical core path plus an optional report-grounded path.

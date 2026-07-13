@@ -1,4 +1,4 @@
 interface:
   display_name: "Competition PPT Template-First"
-  short_description: "Create polished competition decks from available material with template-first visuals and editable PPT layers"
-  default_prompt: "Use $competition-ppt-template-first to organize my project material, plan a competition PPT, design a representative template-first page when helpful, then build editable slides with real evidence and a readability check."
+  short_description: "Analyze project material, map each page's background and visual ingredients, then build editable competition or product PPTs"
+  default_prompt: "Use $competition-ppt-template-first to analyze my documents and desired outcome before designing. Give me the deck type, story route, visual system, and a template contract for every page: background scene, primary visual, real-image slots, text zones, supporting visual ingredients, and avoid list. Then create editable PPT pages with rendered QA."

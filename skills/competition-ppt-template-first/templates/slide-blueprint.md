@@ -8,6 +8,9 @@ Copy this file once per slide before generating a template image.
 ### Judge takeaway
 [One sentence the audience should remember.]
 
+### Page role in the deck
+[Why this page must appear now and what decision it enables.]
+
 ### Facts permitted on this page
 - [Fact / metric / statement] - source: [document or artifact]
 
@@ -21,16 +24,25 @@ Copy this file once per slide before generating a template image.
 - Supporting blocks: [2-4 blocks, each with a word budget]
 - Conclusion line: [one short sentence]
 
-### Visual hierarchy
-- Primary visual anchor: [what is largest]
-- Secondary evidence: [what supports it]
-- Text zones: [left / right / bottom / overlaid]
-- Template intensity: [cinematic rich / balanced / quiet dark]
+### Template contract
+- Background scene or quiet surface: [subject-specific setting, material, product context, or reason for restraint]
+- Primary visual anchor: [what is largest and why]
+- Supporting visual ingredients: [object / detail crop / material / illustration / document cluster]
+- Real-asset slots: [asset ID, aspect ratio, crop focus, exact placement]
+- Title zone: [position and maximum length]
+- Main-claim zone: [position and maximum length]
+- Detail zones: [position, number of blocks, word budget]
+- Conclusion zone: [position and maximum length]
+- Contrast mode: [light / mid / dark] and reason
+- Template intensity: [rich scene / balanced / quiet evidence]
+- Avoid list: [generic cards, line art, default dark-AI treatment, cramped text, etc.]
 
 ### Template-image prompt notes
 - Subject matter:
 - Visual metaphor:
-- Required blank zones:
+- Required visual ingredients:
+- Required real-asset zones:
+- Required blank zones for editable text:
 - Prohibited elements:
 
 ### Editable PPT layers
@@ -43,4 +55,3 @@ Copy this file once per slide before generating a template image.
 - [e.g. certificate needs readable size]
 - [e.g. no unverified benchmark]
 ```
-

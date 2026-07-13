@@ -7,25 +7,24 @@
 [![skills.sh](https://skills.sh/b/che626/competition-ppt-template-first-skill)](https://skills.sh/che626/competition-ppt-template-first-skill)
 [![GitHub stars](https://img.shields.io/github/stars/che626/competition-ppt-template-first-skill?style=flat&logo=github&label=stars)](https://github.com/che626/competition-ppt-template-first-skill/stargazers)
 
-> Start from the story and the evidence you have, then make the important parts editable.
+> Start by deciding what the deck must communicate and what must visibly appear on every page, then make the important parts editable.
 
 Chinese documentation: [README.zh-CN.md](README.zh-CN.md)
 
-`competition-ppt-template-first` is a reusable Agent Skill for competition and defense PPTs. It replaces the usual "dark background + generic components + tiny text" workflow with a practical sequence that can scale up when the source material is complete:
+`competition-ppt-template-first` is a reusable Agent Skill for competition, product, and technical PPTs. It replaces the usual "dark background + generic components + tiny text" workflow with a content-to-template sequence: analyze the material, choose the story, define the background and visual ingredients for every page, then build the editable deck.
 
 ```mermaid
 flowchart LR
-    A[Report, brief,<br/>screenshots and assets] --> B[Source checklist<br/>and usable facts]
-    B --> C[Story and slide plan]
-    C --> D[Template-first<br/>page design]
-    D --> E{Representative page<br/>looks right?}
-    E -- Refine --> D
-    E -- Yes --> F[Editable PPT<br/>with real evidence]
+    A[Report, brief,<br/>screenshots and assets] --> B[Content analysis<br/>and visual inventory]
+    B --> C[Story route<br/>and page roles]
+    C --> D[Per-page template contract<br/>background, visuals, zones]
+    D --> E[Template images<br/>and composition review]
+    E --> F[Editable PPT<br/>with real evidence]
     F --> G[Render and<br/>readability check]
     G --> H[Approved files]
 ```
 
-The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. A full-page template is most valuable for cover, concept, pain-point, solution, award, and conclusion pages; dense technical pages can use a quieter layout instead.
+The template image carries composition, atmosphere, material, light, and visual detail. The editable PPT layer carries the factual claim, real screenshots, charts, certificates, and the text the user may need to update. Every page is planned first: its background scene or quiet surface, primary visual, supporting visual ingredients, real-image slots, and text zones. A full-page template is most valuable for cover, concept, pain-point, solution, award, and conclusion pages; dense technical pages can use a quieter but still purpose-designed layout instead.
 
 ## Two Practical Levels
 
@@ -33,10 +32,10 @@ Start with the level that matches the material on hand:
 
 | Level | Best for | What to do |
 | --- | --- | --- |
-| `Core workflow` | A topic, brief, a few screenshots, or an existing deck. | List available material, plan the page story, make a representative page, build editable slides, and check readability. |
-| `Report-grounded workflow` | A report, paper, data workbook, award evidence, or technical package. | Add a source manifest, fact registry, and slide-source map for the claims that need proof. |
+| `Core workflow` | A topic, brief, a few screenshots, or an existing deck. | Analyze the desired outcome, story type, and visual ingredients; define a template contract for every page; build editable slides and check readability. |
+| `Report-grounded workflow` | A report, paper, data workbook, award evidence, or technical package. | Add a source manifest, content analysis, fact registry, slide-source map, and per-page template contracts for claims that need proof. |
 
-Both levels follow the same visual method. The report-grounded level adds traceability where numbers, model comparisons, awards, and technical claims need to withstand questions.
+Both levels follow the same visual method. The report-grounded level adds traceability where numbers, model comparisons, awards, and technical claims need to withstand questions. Neither level defaults to a dark-blue cyber style: palette, background scene, product/material cues, and light/dark distribution are selected from the subject.
 
 ## Report-Grounded Deck Mode
 
@@ -45,14 +44,15 @@ Feed the project package, not just a topic. The skill converts source documents 
 ```text
 report / proposal / requirements / data / screenshots
   -> source manifest
-  -> usable facts and evidence notes
-  -> source links for key claims
+  -> content analysis: deck type, audience, story, visual ingredients, gaps
+  -> usable facts and source links for key claims
   -> judge-facing narrative
-  -> signature slide
+  -> page/template contracts
+  -> representative template
   -> editable defense PPT
 ```
 
-Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Keep a precise source locator for metrics, comparisons, awards, and other claims likely to be challenged. Read [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) for the complete option.
+Use it when the deck must stay faithful to a `.docx`, PDF, technical report, research paper, data workbook, or competition brief. Keep a precise source locator for metrics, comparisons, awards, and other claims likely to be challenged. Read [`content-to-template-analysis.md`](skills/competition-ppt-template-first/references/content-to-template-analysis.md) and [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) for the complete option.
 
 ## Why Template-First
 
@@ -92,8 +92,10 @@ Attach the report, evidence images, and any reference deck, then use a prompt su
 ```text
 $competition-ppt-template-first
 Read the project report and create an 11-page AI-vision competition defense deck.
-Use the supplied screenshots as real evidence. First summarize the usable facts,
-page plan, and one representative template-first page for approval.
+Use the supplied screenshots as real evidence. First produce a content-to-deck analysis,
+the story route, and a template contract for every page: background scene, primary visual,
+real-image slots, text zones, supporting visual ingredients, and avoid list. Then make one
+representative template-first page for approval.
 ```
 
 More copy-ready prompts are in [`prompt-recipes.md`](skills/competition-ppt-template-first/examples/prompt-recipes.md).
@@ -109,7 +111,7 @@ python skills/competition-ppt-template-first/scripts/init-report-grounded-deck.p
 ```text
 competition-ppt/
   00_intake/     source manifest, extraction notes, original-asset references
-  00_plan/       fact registry, deck brief, slide-source map, page blueprints
+  00_plan/       content analysis, fact registry, deck brief, slide-source map, page blueprints
   01_templates/  approved 16:9 template images and prompt records
   02_build/      editable PPTX work files
   03_renders/    exported previews and QA notes
@@ -125,11 +127,13 @@ The full folder convention is documented in [`project-conventions.md`](skills/co
 | --- | --- |
 | [`SKILL.md`](skills/competition-ppt-template-first/SKILL.md) | Agent execution contract and mode selection |
 | [`workflow.md`](skills/competition-ppt-template-first/references/workflow.md) | Fact-to-deck production method |
+| [`content-to-template-analysis.md`](skills/competition-ppt-template-first/references/content-to-template-analysis.md) | Turns reports and user goals into a story route, visual inventory, and per-page template decisions |
 | [`source-ingestion.md`](skills/competition-ppt-template-first/references/source-ingestion.md) | Document intake, traceable fact extraction, and defense-route construction |
 | [`layout-archetypes.md`](skills/competition-ppt-template-first/references/layout-archetypes.md) | Competition-specific page structures |
 | [`prompt-library.md`](skills/competition-ppt-template-first/references/prompt-library.md) | Prompt patterns for visual templates |
 | [`quality-gates.md`](skills/competition-ppt-template-first/references/quality-gates.md) | Rendered PPT acceptance checks |
 | [`deck-brief.md`](skills/competition-ppt-template-first/templates/deck-brief.md) | Deck-level planning template |
+| [`content-analysis.md`](skills/competition-ppt-template-first/templates/content-analysis.md) | Required analysis of deck type, audience decision, visual ingredients, style rationale, and gaps |
 | [`source-manifest.md`](skills/competition-ppt-template-first/templates/source-manifest.md) | Inventory of reports, requirements, data, and assets |
 | [`slide-source-map.md`](skills/competition-ppt-template-first/templates/slide-source-map.md) | Page-by-page mapping from source facts to judge conclusions |
 | [`slide-blueprint.md`](skills/competition-ppt-template-first/templates/slide-blueprint.md) | Per-page content and layout blueprint |
@@ -138,7 +142,7 @@ The full folder convention is documented in [`project-conventions.md`](skills/co
 
 ## Design Position
 
-Clear before ornate. Use scenes, materials, real visual evidence, light, and typographic scale when they help the page. Keep dense pages calm and readable; keep low-text pages more visual. Avoid generic cyberpunk frames, repeated rounded-card walls, fake UI screenshots, illegible generated text, and body copy reduced to microscopic size.
+Clear before ornate. Use scenes, materials, real visual evidence, product context, light, and typographic scale when they help the page. Keep dense pages calm and readable; keep low-text pages more visual. Avoid generic cyberpunk frames, repeated rounded-card walls, fake UI screenshots, darkened stock photos behind cards, illegible generated text, and body copy reduced to microscopic size.
 
 ## Scope and Limits
 
@@ -147,6 +151,7 @@ Clear before ornate. Use scenes, materials, real visual evidence, light, and typ
 - It does not invent metrics, achievements, or product capabilities.
 - It intentionally keeps complex visual underlays as images when that is the best way to preserve quality; this is not the same as dropping a finished slide screenshot into PowerPoint.
 - It is a working method, not a promise that every project needs cinematic visuals, source tables, or a complicated production pipeline.
+- It does not treat the word "AI" as a reason to make every page black, navy, cyan, or HUD-like. The visual system must be justified by the project subject and the page role.
 
 ## Contributing
 

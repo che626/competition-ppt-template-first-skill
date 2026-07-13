@@ -9,6 +9,7 @@ from pathlib import Path
 
 
 TEMPLATE_NAMES = (
+    "content-analysis.md",
     "deck-brief.md",
     "fact-registry.md",
     "source-manifest.md",
@@ -50,6 +51,7 @@ def main() -> None:
         directory.mkdir(parents=True, exist_ok=True)
 
     destinations = {
+        "content-analysis.md": directories["00_plan"] / "content-analysis.md",
         "deck-brief.md": directories["00_plan"] / "deck-brief.md",
         "fact-registry.md": directories["00_plan"] / "fact-registry.md",
         "source-manifest.md": directories["00_intake"] / "source-manifest.md",
@@ -77,14 +79,15 @@ def main() -> None:
             "# Report-Grounded Competition PPT Workspace\n\n"
             f"Source folder: `{source_note}`\n\n"
             "1. Fill `00_intake/source-manifest.md`.\n"
-            "2. Extract verified facts into `00_plan/fact-registry.md`.\n"
-            "3. Build `00_plan/slide-source-map.md` before any template image.\n"
-            "4. Create one slide blueprint per page, then approve a signature template slide.\n",
+            "2. Split the material into a deck decision in `00_plan/content-analysis.md`.\n"
+            "3. Extract verified facts into `00_plan/fact-registry.md`.\n"
+            "4. Build `00_plan/slide-source-map.md` and template contracts before any template image.\n"
+            "5. Create one slide blueprint per page, then approve a representative template slide.\n",
             encoding="utf-8",
         )
 
     print(f"Initialized: {output}")
-    print("Next: complete 00_intake/source-manifest.md and 00_plan/fact-registry.md")
+    print("Next: complete 00_intake/source-manifest.md and 00_plan/content-analysis.md")
 
 
 if __name__ == "__main__":

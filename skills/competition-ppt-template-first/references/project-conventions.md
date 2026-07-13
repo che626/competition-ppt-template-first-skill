@@ -11,6 +11,7 @@ competition-ppt/
     extraction-notes.md
     supplied-assets/
   00_plan/
+    content-analysis.md
     deck-brief.md
     fact-registry.md
     slide-source-map.md
@@ -38,8 +39,9 @@ competition-ppt/
 
 | State | Meaning | Agent action |
 | --- | --- | --- |
-| `planned` | Content and evidence are mapped, no visual decision yet. | Build the template brief. |
-| `ingested` | Documents, assets, source locators, and do-not-claim items are recorded. | Build the narrative and slide-source map. |
+| `planned` | Content and evidence are mapped, no visual decision yet. | Build the content analysis. |
+| `analyzed` | Deck type, audience decision, narrative route, visual ingredients, questions, and style rationale are recorded. | Build the narrative, slide-source map, and page/template contracts. |
+| `ingested` | Documents, assets, source locators, and do-not-claim items are recorded. | Confirm the content analysis and template contracts. |
 | `template-review` | The whole-slide template has been generated. | Show it; do not build the final page until it is viable. |
 | `build-review` | The layered PPT and render exist. | Inspect readability, source fidelity, and visual fit. |
 | `approved` | The user explicitly accepts the page. | Copy to `04_approved`; preserve it. |
@@ -56,10 +58,10 @@ competition-ppt/
 
 For a full deck, communicate one active stage at a time:
 
-1. Source intake, fact registry, and slide-source map
-2. Visual system and signature-slide approval
-3. Template production
-4. Editable PPT build
-5. Rendered QA and approved archive
+1. Source intake and content analysis
+2. Fact registry, narrative route, and slide-source map
+3. Visual system and page/template contracts
+4. Representative-template approval and template production
+5. Editable PPT build, rendered QA, and approved archive
 
 Use file paths as completion evidence. Do not mark a stage complete solely because a chat response was written.

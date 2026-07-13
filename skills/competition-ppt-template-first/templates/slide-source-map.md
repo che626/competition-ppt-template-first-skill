@@ -2,10 +2,10 @@
 
 Build this after source ingestion and before visual planning. This is the deck's factual route.
 
-| Slide | Judge question | Primary conclusion | Fact IDs | Evidence IDs | Required visual | Speaker transition | Validation risk |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 01 | What is this project? |  | F-01 | E-01 | Hero scene / real product cue | Why does it matter? | No unsupported positioning |
-| 02 | Why is it needed? |  |  |  |  | What must the solution solve? | Pain point must be sourced |
+| Slide | Page role | Judge question | Primary conclusion | Fact IDs | Evidence IDs | Required real asset | Visual anchor / background scene | Speaker transition | Validation risk |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 01 | Identity / promise | What is this project? |  | F-01 | E-01 | Product / project cue | Hero scene that belongs to the subject | Why does it matter? | No unsupported positioning |
+| 02 | Problem / context | Why is it needed? |  |  |  |  | Specific operating scene or evidence | What must the solution solve? | Pain point must be sourced |
 
 ## Narrative continuity check
 
@@ -15,4 +15,3 @@ Build this after source ingestion and before visual planning. This is the deck's
 - Product proof:
 - Differentiation:
 - Grounded next step:
-
